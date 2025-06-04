@@ -13,14 +13,16 @@
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="styles.css">
     <!-- Add libraries for Animation and Google font API -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- Add Gmail API -->
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="https://accounts.google.com/gsi/client"></script>
+    <!-- PDF Generation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 
 <body style="scroll-behavior: smooth;">
@@ -50,9 +52,13 @@
                         <option value="Diploma leading to Bachelor">Diploma leading to Bachelor</option>
                         <option value="Advanced Diploma / Associate Degree">Advanced Diploma / Associate Degree</option>
                         <option value="Bachelor's Degree">Bachelor's Degree</option>
-                        <option value="Bachelor Honours / Grad Cert / Grad Dip">Bachelor Honours / Grad Cert / Grad Dip
-                        </option>
-                        <option value="Master's Degree">Master's Degree</option>
+                        <option value="Bachelor Honours">Bachelor Honours</option>
+                        <option value="Graduate Certificate">Graduate Certificate</option>
+                        <option value="Graduate Diploma">Graduate Diploma</option>
+                        <option value="Postgraduate Certificate">Postgraduate Certificate</option>
+                        <option value="Postgraduate Diploma">Postgraduate Diploma</option>
+                        <option value="Master's Degree (Course work)">Master's Degree (Course work)</option>
+                        <option value="Master's Degree (By Research)">Master's Degree (By Research)</option>
                         <option value="Doctoral Degree (PhD)">Doctoral Degree (PhD)</option>
                     </select>
                 </div>
@@ -86,18 +92,33 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Preferred Locations:</label>
+                    <label for="state">State:</label>
+                    <select id="state" name="state">
+                        <option value="">Select State</option>
+                        <option value="New South Wales">New South Wales</option>
+                        <option value="Victoria">Victoria</option>
+                        <option value="Queensland">Queensland</option>
+                        <option value="Western Australia">Western Australia</option>
+                        <option value="South Australia">South Australia</option>
+                        <option value="Tasmania">Tasmania</option>
+                        <option value="Northern Territory">Northern Territory</option>
+                        <option value="Australian Capital Territory">Australian Capital Territory</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>City:</label>
                     <div class="multiselect-dropdown">
                         <div class="select-box" id="locationSelectBox">
-                            <div class="selected-text">Select Locations</div>
+                            <div class="selected-text">Select Cities</div>
                             <div class="select-arrow">▼</div>
                         </div>
                         <div id="locationCheckboxes" class="checkbox-list">
                             <div class="search-box">
-                                <input type="text" id="locationSearch" placeholder="Search locations...">
+                                <input type="text" id="locationSearch" placeholder="Search cities...">
                             </div>
                             <div class="checkbox-options">
-                                <!-- Locations will be populated by JavaScript -->
+                                <!-- Cities will be populated by JavaScript -->
                             </div>
                         </div>
                     </div>
@@ -170,19 +191,18 @@
                 <table id="resultsTable">
                     <thead>
                         <tr>
-                            <th>University_Name</th>
+                            <th>University</th>
                             <th>Location</th>
                             <th>Degree</th>
                             <th>Course</th>
                             <th>Intake</th>
-                            <th>Percentage_CGPA</th>
-                            <th>English_Test</th>
-                            <th>Study_Gap</th>
-                            <th>Field_of_Study</th>
+                            <th>Score</th>
+                            <th>English Test</th>
+                            <th>Field</th>
                             <th>Fee</th>
-                            <th>Initial_Deposit</th>
-                            <th>Other_Remarks</th>
-                            <th>Course link</th>
+                            <th>Initial Deposit</th>
+                            <th>Remarks</th>
+                            <th>Course Link</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -193,11 +213,8 @@
         </section>
     </div>
 
-    <!-- Load scripts in correct order -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+    <!-- Initialize jsPDF before loading main script -->
     <script>
-        // Initialize jsPDF
         window.jsPDF = window.jspdf.jsPDF;
     </script>
     <script src="script.js"></script>
