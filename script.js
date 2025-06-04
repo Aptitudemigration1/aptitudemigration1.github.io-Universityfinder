@@ -150,23 +150,16 @@ document.documentElement.style.setProperty('--animate-duration', '0.5s');
 // Country-specific configurations
 const countryConfigs = {
   Australia: {
-    cities: [
-      'Adelaide', 'Albany', 'Albury', 'Alice Springs', 'Armidale', 'Ballarat',
-      'Bathurst', 'Bendigo', 'Brisbane', 'Broken Hill', 'Broome', 'Bunbury',
-      'Bundaberg', 'Busselton', 'Cairns', 'Canberra', 'Casino', 'Coffs Harbour',
-      'Darwin', 'Devonport', 'Dubbo', 'Echuca', 'Emerald', 'Esperance',
-      'Frankston', 'Fremantle', 'Geelong', 'Geraldton', 'Gladstone', 'Gold Coast',
-      'Goulburn', 'Grafton', 'Griffith', 'Hervey Bay', 'Hobart', 'Horsham',
-      'Kalgoorlie', 'Karratha', 'Katherine', 'Kwinana', 'Launceston', 'Lismore',
-      'Lithgow', 'Mackay', 'Maitland', 'Mandurah', 'Melbourne', 'Mildura',
-      'Mount Gambier', 'Mount Isa', 'Newcastle', 'Nowra', 'Orange',
-      'Palm Beach', 'Parramatta', 'Penrith', 'Perth', 'Port Augusta',
-      'Port Hedland', 'Port Lincoln', 'Port Macquarie', 'Port Pirie',
-      'Queanbeyan', 'Rockhampton', 'Shepparton', 'Sunshine Coast', 'Sydney',
-      'Tamworth', 'Toowoomba', 'Townsville', 'Traralgon', 'Tweed Heads',
-      'Wagga Wagga', 'Warrnambool', 'Whyalla', 'Wollongong', 'Wonthaggi',
-      'Wyong'
-    ],
+    states: {
+      'New South Wales': ['Sydney', 'Newcastle', 'Wollongong', 'Central Coast', 'Albury', 'Armidale', 'Bathurst', 'Coffs Harbour', 'Dubbo', 'Goulburn', 'Grafton', 'Griffith', 'Lismore', 'Orange', 'Port Macquarie', 'Queanbeyan', 'Tamworth', 'Tweed Heads', 'Wagga Wagga', 'Aarons Pass', 'Abbotsbury', 'Abbotsford', 'Abercrombie', 'Abercrombie River', 'Aberdare', 'Aberdeen', 'Aberfoyle', 'Aberglasslyn', 'Abermain', 'Abernethy', 'Abington', 'Acacia Creek', 'Acacia Gardens', 'Adaminaby', 'Adamstown', 'Adamstown Heights', 'Adelong', 'Adjungbilly', 'Afterlee', 'Agnes Banks', 'Airds', 'Akolele', 'Albert', 'Albion Park', 'Albion Park Rail', 'Albury', 'Aldavilla', 'Alectown', 'Alexandria', 'Alfords Point', 'Alfredtown', 'Alice', 'Alison', 'Allambie Heights', 'Allandale', 'Allawah', 'Alleena', 'Allgomera', 'Allworth', 'Allynbrook', 'Alma Park', 'Alpine', 'Alstonvale', 'Alstonville', 'Alumy Creek', 'Amaroo', 'Ambarvale', 'Amosfield', 'Anabranch North', 'Anabranch South', 'Anambah', 'Ando', 'Anembo', 'Angledale', 'Angledool', 'Anglers Reach', 'Angourie', 'Anna Bay', 'Annandale', 'Annangrove', 'Appin', 'Apple Tree Flat', 'Appleby', 'Appletree Flat', 'Apsley', 'Arable', 'Arakoon', 'Araluen', 'Aratula', 'Arcadia', 'Arcadia Vale', 'Ardglen', 'Arding', 'Ardlethan', 'Argalong', 'Argenton', 'Argents Hill', 'Argoon', 'Ariah Park', 'Arkell', 'Arkstone', 'Armatree', 'Armidale', 'Arncliffe', 'Arndell Park', 'Arrawarra', 'Arrawarra Headland', 'Artarmon', 'Arthurville', 'Arumpo', 'Ashbury', 'Ashby', 'Ashby Heights', 'Ashby Island', 'Ashcroft', 'Ashfield', 'Ashford', 'Ashley', 'Ashmont', 'Ashtonfield', 'Asquith', 'Atholwood', 'Attunga', 'Auburn', 'Auburn Vale', 'Austinmer', 'Austral', 'Austral Eden', 'Avalon Beach', 'Avisford', 'Avoca', 'Avoca Beach', 'Avon', 'Avondale', 'Avonside', 'Awaba', 'Aylmerton', 'Baan Baa', 'Babinda', 'Babyl Creek', 'Back Creek', 'Back Forest', 'Backmede', 'Backwater', 'Badgerys Creek', 'Badja', 'Baerami', 'Baerami Creek', 'Bagnoo', 'Bago', 'Bagotville', 'Bakers Creek', 'Bakers Swamp', 'Balaclava', 'Balala', 'Balcolyn', 'Bald Blair', 'Bald Hills', 'Bald Nob', 'Bald Ridge', 'Baldersleigh', 'Baldry', 'Balfours Peak', 'Balgowlah', 'Balgowlah Heights', 'Balgownie', 'Balickera', 'Balladoran', 'Ballalaba', 'Balldale', 'Ballengarra', 'Ballimore', 'Ballina', 'Ballyroe', 'Balmain', 'Balmain East', 'Balmoral', 'Balranald', 'Bamarang', 'Banda Banda', 'Bandon Grove', 'Bangadang', 'Bangalee', 'Bangalow', 'Bangheet', 'Bango', 'Bangor', 'Banksia', 'Banksmeadow', 'Bankstown', 'Bankstown Aerodrome', 'Bannaby', 'Bannister', 'Banoon', 'Banora Point', 'Banyabba', 'Bar Beach', 'Bar Point', 'Bara', 'Baradine', 'Barangaroo', 'Barcoongere', 'Barden Ridge', 'Bardia', 'Bardwell Park', 'Bardwell Valley', 'Barellan', 'Bargo', 'Barham', 'Barigan', 'Barkers Vale', 'Barmedman', 'Barneys Reef', 'Barnsley', 'Barooga', 'Barraba', 'Barrack Heights', 'Barrack Point', 'Barraganyatti', 'Barragga Bay', 'Barratta', 'Barren Grounds', 'Barrengarry', 'Barretts Creek', 'Barringella', 'Barrington', 'Barrington Tops', 'Barry', 'Barwang', 'Barwon', 'Baryulgil', 'Basin View', 'Bass Hill', 'Bassendean', 'Batar Creek', 'Bateau Bay', 'Batehaven', 'Batemans Bay', 'Bathampton', 'Bathurst', 'Batlow', 'Baulkham Hills', 'Baw Baw', 'Bawley Point', 'Baxters Ridge', 'Bayview', 'Beacon Hill', 'Beaconsfield', 'Bean Creek', 'Bearbong', 'Beaumont', 'Beaumont Hills', 'Beckom', 'Bective', 'Bectric', 'Bedgerabong', 'Beechwood', 'Beecroft', 'Beecroft Peninsula', 'Beelbangera', 'Beemunnel', 'Bega', 'Beggan Beggan', 'Belanglo', 'Belbora', 'Belfield', 'Belford', 'Belfrayden', 'Belgravia', 'Belimbla Park', 'Bell', 'Bella Vista', 'Bellambi', 'Bellangry', 'Bellata', 'Bellawongarah', 'Bellbird', 'Bellbird Heights', 'Bellbrook', 'Bellevue Hill', 'Bellimbopinni', 'Bellingen', 'Bellmount Forest', 'Belltrees', 'Belmont', 'Belmont North', 'Belmont South', 'Belmore', 'Belmore River', 'Beloka', 'Belowra', 'Belrose', 'Bemboka', 'Ben Bullen', 'Ben Lomond', 'Benandarah', 'Bendalong', 'Bendemeer', 'Bendick Murrell', 'Bendolba', 'Bendoura', 'Benerembah', 'Bengalla', 'Bennetts Green', 'Benolong', 'Bensville', 'Bentley', 'Berala', 'Berambing', 'Beresfield', 'Bergalia', 'Berkeley', 'Berkeley Vale', 'Berkshire Park', 'Berlang', 'Bermagui', 'Berowra', 'Berowra Creek', 'Berowra Heights', 'Berowra Waters', 'Berrambool', 'Berrara', 'Berremangra', 'Berrico', 'Berridale', 'Berrigal', 'Berrigan', 'Berrilee', 'Berrima', 'Berringer Lake', 'Berry', 'Berry Jerry', 'Berry Mountain', 'Berry Park', 'Berthong', 'Beryl', 'Bethungra', 'Bevendale', 'Beverley Park', 'Beverly Hills', 'Bewong', 'Bexhill', 'Bexley', 'Bexley North', 'Biala', 'Bibbenluke', 'Biddon', 'Bidgeemia', 'Bidwill', 'Bielsdown Hills', 'Big Hill', 'Big Jacks Creek', 'Big Ridge', 'Big Springs', 'Bigga', 'Bilambil', 'Bilambil Heights', 'Bilbul', 'Bilgola Beach', 'Bilgola Plateau', 'Billeroy', 'Billilingra', 'Billimari', 'Billinudgel', 'Billys Creek', 'Billywillinga', 'Bilpin', 'Bimberi', 'Bimbi', 'Bimbimbie', 'Binalong', 'Binda', 'Bindera', 'Bingara', 'Bingeebeebra Creek', 'Bingie', 'Bingleburra', 'Biniguy', 'Binjura', 'Binna Burra', 'Binnaway', 'Binya', 'Birchgrove', 'Birdwood', 'Birganbigil', 'Birmingham Gardens', 'Birriwa', 'Birrong', 'Bishops Bridge', 'Bithramere', 'Black Creek', 'Black Head', 'Black Hill', 'Black Hollow', 'Black Mountain', 'Black Range', 'Black Springs', 'Blackalls Park', 'Blackbutt', 'Blackett', 'Blackheath', 'Blackmans Flat', 'Blackmans Point', 'Blacksmiths', 'Blacktown', 'Blackville', 'Blackwall', 'Blair Athol', 'Blairmount', 'Blakebrook', 'Blakehurst', 'Blakney Creek', 'Bland', 'Blandford', 'Blaxland', 'Blaxlands Creek', 'Blaxlands Ridge', 'Blayney', 'Bligh Park', 'Blighty', 'Blowering', 'Blue Bay', 'Blue Haven', 'Blue Knob', 'Blue Mountains National Park', 'Blue Nobby', 'Blue Vale', 'Blueys Beach', 'Boambee', 'Boambee East', 'Boambolo', 'Boat Harbour', 'Bobadah', 'Bobin', 'Bobs Creek', 'Bobs Farm', 'Bobundara', 'Boco', 'Bocoble', 'Bocobra', 'Bodalla', 'Bodangora', 'Boeill Creek', 'Bogan', 'Bogan Gate', 'Bogangar', 'Bogee', 'Boggabilla', 'Boggabri', 'Bogong Peaks Wilderness', 'Bohena Creek', 'Bohnock', 'Bolaro', 'Bolivia', 'Bolong', 'Bolton Point', 'Bolwarra', 'Bolwarra Heights', 'Bom Bom', 'Bomaderry', 'Bombah Point', 'Bombala', 'Bombay', 'Bombira', 'Bombo', 'Bombowlee', 'Bombowlee Creek', 'Bomen', 'Bomera', 'Bonalbo', 'Bondi', 'Bondi Beach', 'Bondi Forest', 'Bondi Junction', 'Bonnells Bay', 'Bonnet Bay', 'Bonny Hills', 'Bonnyrigg', 'Bonnyrigg Heights', 'Bonshaw', 'Bonville', 'Booerie Creek', 'Book Book', 'Booker Bay', 'Bookham', 'Bookookoorara', 'Bookram', 'Boolambayte', 'Boolaroo', 'Boolcarroll', 'Booligal', 'Boolijah', 'Boomanoomana', 'Boomerang Beach', 'Boomey', 'Boomi', 'Boomi Creek', 'Boona Mount', 'Boonal', 'Boonoo Boonoo', 'Boorabee Park', 'Booragul', 'Booral', 'Boorga', 'Boorganna', 'Boorolong', 'Boorook', 'Boorooma', 'Booroorban', 'Boorowa', 'Bootawa', 'Booti Booti', 'Booyong', 'Bora Ridge', 'Borah Creek', 'Borambola', 'Border Ranges', 'Boree', 'Boree Creek', 'Borenore', 'Boro', 'Bossley Park', 'Bostobrick', 'Botany', 'Botobolar', 'Bottle Creek', 'Bouddi', 'Bourbah', 'Bourke', 'Bourkelands', 'Bournda', 'Bournewood', 'Bow Bowing', 'Bowan Park', 'Bowen Mountain', 'Bowenfels', 'Bowling Alley Point', 'Bowman', 'Bowman Farm', 'Bowmans Creek', 'Bowna', 'Bowning', 'Bowral', 'Bowraville', 'Box Head', 'Box Hill', 'Box Ridge', 'Boxers Creek', 'Boydtown', 'Bradbury', 'Braefield', 'Braemar', 'Braemar Bay', 'Braidwood', 'Brandy Hill', 'Branxton', 'Braunstone', 'Brawboy', 'Bray Park', 'Brays Creek', 'Brayton', 'Breadalbane', 'Breakfast Creek', 'Breakfast Point', 'Bream Beach', 'Bredbo', 'Breelong', 'Breeza', 'Bretti', 'Brewarrina', 'Brewongle', 'Briarbrook', 'Bribbaree', 'Bridgman', 'Brierfield', 'Brighton-le-Sands', 'Brightwaters', 'Bril Bril', 'Brimbin', 'Brindabella', 'Brinerville', 'Bringelly', 'Bringenbrong', 'Brisbane Grove', 'Broadmeadow', 'Broadwater', 'Broadway', 'Brobenah', 'Brocklehurst', 'Brocklesby', 'Brockley', 'Brodies Plains', 'Brogans Creek', 'Brogers Creek', 'Brogo', 'Broke', 'Broken Head', 'Broken Hill', 'Brombin', 'Bronte', 'Brookdale', 'Brookfield', 'Brooklana', 'Brooklet', 'Brooklyn', 'Brookong', 'Brookvale', 'Brooman', 'Brooms Head', 'Broughams Gate', 'Broughton', 'Broughton Vale', 'Broughton Village', 'Broulee', 'Brownlow Hill', 'Browns Creek', 'Browns Mountain', 'Brownsville', 'Brucedale', 'Bruie Plains', 'Bruinbun', 'Brumby Plains', 'Brundee', 'Brungle', 'Brungle Creek', 'Brunkerville', 'Brunswick Heads', 'Brushgrove', 'Brushy Creek', 'Buangla', 'Bucca', 'Bucca Wauka', 'Buccarumbi', 'Buchanan', 'Buckajo', 'Buckaroo', 'Buckenbowra', 'Buckenderra', 'Buckendoon', 'Bucketty', 'Buckra Bendinni', 'Budawang', 'Buddabadah', 'Budden', 'Budderoo', 'Buddong', 'Budgee Budgee', 'Budgewoi', 'Budgewoi Peninsula', 'Budgong', 'Buff Point', 'Bugaldie', 'Bukalong', 'Bukkulla', 'Bulahdelah', 'Bulee', 'Bulga', 'Bulga Forest', 'Bulgary', 'Bulla', 'Bulla Creek', 'Bullaburra', 'Bullagreen', 'Bullarah', 'Bullatale', 'Bullawa Creek', 'Bulldog', 'Bulli', 'Bulliac', 'Bullio', 'Bulyeroi', 'Bumbaldry', 'Bumbalong', 'Bundabah', 'Bundagen', 'Bundanoon', 'Bundarra', 'Bundeena', 'Bundella', 'Bundemar', 'Bundewallah', 'Bundook', 'Bundure', 'Bungaba', 'Bungabbee', 'Bungalora', 'Bungarby', 'Bungarribee', 'Bungawalbin', 'Bungendore', 'Bungonia', 'Bungowannah', 'Bungwahl', 'Bunnaloo', 'Bunnan', 'Bunyah', 'Bunyan', 'Burcher', 'Bureen', 'Burnt Bridge', 'Burnt Yards', 'Buronga', 'Burra', 'Burra Creek', 'Burraboi', 'Burradoo', 'Burragate', 'Burrandana', 'Burraneer', 'Burrangong', 'Burrapine', 'Burrawang', 'Burrell Creek', 'Burren Junction', 'Burrier', 'Burrill Lake', 'Burringbar', 'Burrinjuck', 'Burroway', 'Burrumbuttock', 'Burrundulla', 'Burwood', 'Burwood Heights', 'Busby', 'Busbys Flat', 'Bushells Ridge', 'Buttaba', 'Buttai', 'Butterwick', 'Buxton', 'Byabarra', 'Byadbo Wilderness', 'Byangum', 'Bylong', 'Byng', 'Byrock', 'Byron Bay', 'Byrrill Creek', 'Bywong', 'Cabarita', 'Cabarita Beach', 'Cabbage Tree Island', 'Cabramatta', 'Cabramatta West', 'Cabramurra', 'Caddens', 'Cadgee', 'Cadia', 'Caffreys Flat', 'Cairncross', 'Calala', 'Calamia', 'Calderwood', 'Caldwell', 'Calga', 'Califat', 'Calimo', 'Callaghan', 'Callaghans Creek', 'Callala Bay', 'Callala Beach', 'Calliope', 'Caloola', 'Cambalong', 'Camberwell', 'Cambewarra', 'Cambewarra Village', 'Camboon', 'Cambra', 'Cambridge Gardens', 'Cambridge Park', 'Cambridge Plateau', 'Camden', 'Camden Head', 'Camden Park', 'Camden South', 'Camellia', 'Cameron Park', 'Camerons Creek', 'Camira', 'Cammeray', 'Camp Creek', 'Campbelltown', 'Camperdown', 'Campsie', 'Campvale', 'Cams Wharf', 'Canada Bay', 'Canadian Lead', 'Canbelego', 'Candelo', 'Cangai', 'Caniaba', 'Canley Heights', 'Canley Vale', 'Canobolas', 'Canoelands', 'Canonba', 'Canowindra', 'Canterbury', 'Canton Beach', 'Canyonleigh', 'Caparra', 'Capeen Creek', 'Capertee', 'Capoompeta', 'Captains Flat', 'Carabost', 'Caragabal', 'Carcalgong', 'Carcoar', 'Cardiff', 'Cardiff Heights', 'Cardiff South', 'Carey Bay', 'Cargo', 'Carinda', 'Caringbah', 'Caringbah South', 'Carlaminda', 'Carlingford', 'Carlton', 'Carnes Hill', 'Carnham', 'Carool', 'Caroona', 'Carrabolla', 'Carrai', 'Carramar', 'Carrathool', 'Carrick', 'Carrington', 'Carrington Falls', 'Carroll', 'Carrowbrook', 'Carrs Creek', 'Carrs Island', 'Carrs Peninsula', 'Carss Park', 'Cartwright', 'Cartwrights Hill', 'Carwell', 'Carwoola', 'Cascade', 'Casino', 'Cassilis', 'Castle Cove', 'Castle Doyle', 'Castle Hill', 'Castle Rock', 'Castlecrag', 'Castlereagh', 'Casuarina', 'Casula', 'Catalina', 'Cataract', 'Cathcart', 'Catherine Field', 'Catherine Hill Bay', 'Cathundral', 'Cattai', 'Cattle Creek', 'Cavan', 'Caves Beach', 'Cawdor', 'Cawongla', 'Cecil Hills', 'Cecil Park', 'Cedar Brush Creek', 'Cedar Creek', 'Cedar Party', 'Cedar Point', 'Cells River', 'Centennial Park', 'Central Colo', 'Central Macdonald', 'Central Mangrove', 'Central Tilba', 'Cessnock', 'Chaelundi', 'Chain Valley Bay', 'Chakola', 'Chambigne', 'Charbon', 'Charles Sturt University', 'Charlestown', 'Charleys Forest', 'Charlotte Bay', 'Charlton', 'Charmhaven', 'Chatham Valley', 'Chatsbury', 'Chatswood', 'Chatswood West', 'Chatsworth', 'Cheero Point', 'Cheltenham', 'Cherry Tree Hill', 'Cherrybrook', 'Chester Hill', 'Chichester', 'Chifley', 'Chilcotts Creek', 'Chilcotts Grass', 'Chillingham', 'Chinderah', 'Chinnock', 'Chippendale', 'Chipping Norton', 'Chisholm', 'Chiswick', 'Chittaway Bay', 'Chittaway Point', 'Chowan Creek', 'Chullora', 'Church Point', 'Clandulla', 'Clare', 'Claremont Meadows', 'Clarence', 'Clarence Town', 'Clarendon', 'Clarenza', 'Clareville', 'Claymore', 'Clear Creek', 'Clear Range', 'Clearfield', 'Clemton Park', 'Clergate', 'Cleveland', 'Clifden', 'Cliftleigh', 'Clifton', 'Clifton Grove', 'Clontarf', 'Clothiers Creek', 'Clouds Creek', 'Clovelly', 'Clunes', 'Clybucca', 'Clyde', 'Clydesdale', 'Coal Point', 'Coalcliff', 'Coaldale', 'Coasters Retreat', 'Cobaki', 'Cobaki Lakes', 'Cobar', 'Cobar Park', 'Cobargo', 'Cobark', 'Cobbadah', 'Cobbitty', 'Cobramunga', 'Cockwhy', 'Codrington', 'Coffee Camp', 'Coffs Harbour', 'Coggan', 'Cogra Bay', 'Coila', 'Coldstream', 'Coleambally', 'Colebee', 'Coledale', 'Colinroobie', 'Colinton', 'Collarenebri', 'Collaroy', 'Collaroy Plateau', 'Collector', 'Collendina', 'Collerina', 'Collie', 'Collingullie', 'Collingwood', 'Collins Creek', 'Collombatti', 'Collum Collum', 'Colly Blue', 'Colo', 'Colo Heights', 'Colo Vale', 'Colongra', 'Colyton', 'Comara', 'Combaning', 'Combara', 'Comberton', 'Comboyne', 'Come By Chance', 'Comerong Island', 'Commissioners Creek', 'Como', 'Comobella', 'Conargo', 'Concord', 'Concord West', 'Condell Park', 'Condobolin', 'Condong', 'Coneac', 'Congarinni', 'Congarinni North', 'Congewai', 'Congo', 'Conimbia', 'Coniston', 'Conjola', 'Conjola Park', 'Connells Point', 'Constitution Hill', 'Coogee', 'Cookamidgera', 'Cookardinia', 'Cooks Gap', 'Cooks Hill', 'Cooks Myalls', 'Coolabah', 'Coolac', 'Coolagolite', 'Coolah', 'Coolamon', 'Coolangatta', 'Coolangubra', 'Coolatai', 'Cooleman', 'Cooleys Creek', 'Coolgardie', 'Coolongolook', 'Coolringdon', 'Coolumbooka', 'Coolumburra', 'Cooma', 'Coomba Bay', 'Coomba Park', 'Coombadjha', 'Coombell', 'Coomealla', 'Coomoo Coomoo', 'Coonabarabran', 'Coonamble', 'Coongbar', 'Cooperabung', 'Coopernook', 'Coopers Gully', 'Coopers Shoot', 'Cooplacurripa', 'Coorabell', 'Cooranbong', 'Cootamundra', 'Cootralantra', 'Cooyal', 'Copacabana', 'Cope', 'Copeland', 'Copeton', 'Copmanhurst', 'Coppabella', 'Copperhannia', 'Coraki', 'Coralville', 'Coramba', 'Corang', 'Corangula', 'Corbie Hill', 'Cordeaux', 'Cordeaux Heights', 'Coree', 'Coreen', 'Corindi Beach', 'Corinella', 'Corlette', 'Corndale', 'Corney Town', 'Cornwallis', 'Corobimilla', 'Corowa', 'Corrabare', 'Corrimal', 'Corrong', 'Corrowong', 'Corunna', 'Cottage Point', 'Cottonvale', 'Cougal', 'Countegany', 'Courabyra', 'Couradda', 'Couragago', 'Couridjah', 'Coutts Crossing', 'Cow Flat', 'Cowabbie', 'Cowan', 'Cowper', 'Cowra', 'Coxs Creek', 'Coxs Crown', 'Crabbes Creek', 'Crackenback', 'Craigie', 'Cranebrook', 'Crangan Bay', 'Craven', 'Craven Plateau', 'Crawford River', 'Crawney', 'Creewah', 'Cremorne', 'Cremorne Point', 'Crescent Head', 'Crestwood', 'Cringila', 'Croki', 'Cromer', 'Cronulla', 'Crooble', 'Croobyar', 'Crooked Corner', 'Crookwell', 'Croom', 'Croppa Creek', 'Cross Roads', 'Crosslands', 'Croudace Bay', 'Crowdy Bay National Park', 'Crowdy Head', 'Crows Nest', 'Crowther', 'Crowther Island', 'Croydon', 'Croydon Park', 'Crudine', 'Cryon', 'Crystal Creek', 'Cubba', 'Cudal', 'Cudgegong', 'Cudgel', 'Cudgen', 'Cudgera Creek', 'Cudmirrah', 'Culburra Beach', 'Culcairn', 'Cullen Bullen', 'Cullenbone', 'Cullendore', 'Cullerin', 'Cullivel', 'Culmaran Creek', 'Cumbalum', 'Cumbandry', 'Cumberland Reach', 'Cumbo', 'Cumborah', 'Cumnock', 'Cundle Flat', 'Cundletown', 'Cundumbul', 'Cunjurong Point', 'Cunningar', 'Cunninyeuk', 'Curban', 'Curl Curl', 'Curlew Waters', 'Curlewis', 'Curlwaa', 'Curra Creek', 'Currabubula', 'Curragh', 'Curramore', 'Currans Hill', 'Currarong', 'Currawang', 'Currawarna', 'Curraweela', 'Curricabark', 'Currowan', 'Cuttabri', 'Cuttagee', 'Dabee', 'Daceyville', 'Dairy Arm', 'Dairy Flat', 'Dairymans Plains', 'Daleys Point', 'Dalgety', 'Dalmeny', 'Dalmorton', 'Dalswinton', 'Dalton', 'Dalwood', 'Dandaloo', 'Dandry', 'Dangar Island', 'Dangarsleigh', 'Dangelong', 'Dapto', 'Darawank', 'Darbalara', 'Darbys Falls', 'Dareton', 'Dargan', 'Dark Corner', 'Darkes Forest', 'Darkwood', 'Darling Point', 'Darlinghurst', 'Darlington', 'Darlington Point', 'Darlow', 'Dartbrook', 'Daruka', 'Davidson', 'Davis Creek', 'Davistown', 'Dawes Point', 'Daysdale', 'Dean Park', 'Deauville', 'Debenham', 'Dee Why', 'Deep Creek', 'Deepwater', 'Deer Vale', 'Delegate', 'Delungra', 'Denham Court', 'Denhams Beach', 'Deniliquin', 'Denistone', 'Denistone East', 'Denistone West', 'Denman', 'Depot Beach', 'Derriwong', 'Deua', 'Deua River Valley', 'Devils Hole', 'Dewitt', 'Dharruk', 'Dhulura', 'Dhuragoon', 'Diamond Beach', 'Diamond Head', 'Diehard', 'Diggers Camp', 'Dignams Creek', 'Dilkoon', 'Dilpurra', 'Dingo Forest', 'Dinoga', 'Dirnaseer', 'Dirty Creek', 'Dobies Bight', 'Doctor George Mountain', 'Doctors Gap', 'Dog Rocks', 'Dolans Bay', 'Dolls Point', 'Dollys Flat', 'Dolphin Point', 'Dombarton', 'Donald Creek', 'Dondingalong', 'Doon Doon', 'Doonbah', 'Doonside', 'Dooralong', 'Dora Creek', 'Dorrigo', 'Dorrigo Mountain', 'Dorroughby', 'Double Bay', 'Doubtful Creek', 'Douglas Park', 'Dover Heights', 'Downside', 'Doyalson', 'Doyalson North', 'Doyles Creek', 'Doyles River', 'Drake', 'Drildool', 'Dripstone', 'Drummoyne', 'Dry Creek', 'Dry Plain', 'Dubbo', 'Duck Creek', 'Duckenfield', 'Duckmaloi', 'Dudley', 'Duffys Forest', 'Dulguigan', 'Dulwich Hill', 'Dum Dum', 'Dumaresq', 'Dumaresq Island', 'Dumaresq Valley', 'Dumbudgery', 'Dunbible', 'Dunbogan', 'Duncans Creek', 'Dundas', 'Dundas Valley', 'Dundee', 'Dundurrabin', 'Dunedoo', 'Dungarubba', 'Dungay', 'Dungeree', 'Dungog', 'Dungowan', 'Dunkeld', 'Dunmore', 'Dunolly', 'Dunoon', 'Duns Creek', 'Dunville Loop', 'Dural', 'Duramana', 'Duranbah', 'Duri', 'Duroby', 'Durran Durra', 'Durras North', 'Durren Durren', 'Duval', 'Dyers Crossing', 'Dyraaba', 'Dyrring', 'Eagle Vale', 'Eagleton', 'Earlwood', 'East Albury', 'East Ballina', 'East Branxton', 'East Coraki', 'East Corrimal', 'East Gosford', 'East Gresford', 'East Hills', 'East Jindabyne', 'East Kangaloon', 'East Kempsey', 'East Killara', 'East Kurrajong', 'East Lindfield', 'East Lismore', 'East Lynne', 'East Maitland', 'East Ryde', 'East Seaham', 'East Tamworth', 'East Wagga Wagga', 'East Wardell', 'Eastern Creek', 'Eastgardens', 'Eastlakes', 'Eastwood', 'Eatonsville', 'Ebenezer', 'Ebor', 'Eccleston', 'Edderton', 'Eden', 'Eden Creek', 'Edensor Park', 'Edenville', 'Edgecliff', 'Edgeroi', 'Edgeworth', 'Edith', 'Edmondson Park', 'Edrom', 'Eenaweena', 'Eglinton', 'Eighteen Mile', 'Elands', 'Elanora Heights', 'Elcombe', 'Elderslie', 'Eleebana', 'Elermore Vale', 'Elizabeth Bay', 'Elizabeth Beach', 'Elizabeth Hills', 'Ellalong', 'Elland', 'Ellangowan', 'Ellenborough', 'Ellerslie', 'Ellerston', 'Ellis Lane', 'Elong Elong', 'Elrington', 'Elsmore', 'Eltham', 'Elvina Bay', 'Emerald Beach', 'Emerald Hill', 'Emerton', 'Emmaville', 'Empire Bay', 'Empire Vale', 'Emu Heights', 'Emu Plains', 'Emu Swamp', 'Endrick', 'Enfield', 'Engadine', 'Englorie Park', 'Enmore', 'Enngonia', 'Environa', 'Epping', 'Eraring', 'Eremerang', 'Erigolia', 'Erin Vale', 'Erina', 'Erina Heights', 'Ermington', 'Erowal Bay', 'Errowanbang', 'Erskine Park', 'Erskineville', 'Erudgere', 'Eschol Park', 'Esk', 'Essington', 'Estella', 'Ettalong Beach', 'Ettamogah', 'Ettrema', 'Ettrick', 'Euabalong', 'Euabalong West', 'Euberta', 'Euchareena', 'Eucumbene', 'Eugowra', 'Eulah Creek', 'Eumungerie', 'Eunanoreenya', 'Eungai Creek', 'Eungai Rail', 'Eungella', 'Eureka', 'Eurimbla', 'Eurobodalla', 'Euroka', 'Euroley', 'Eurongilly', 'Eurunderee', 'Euston', 'Evans Head', 'Evans Plains', 'Eveleigh', 'Eviron', 'Ewingar', 'Ewingsdale', 'Exeter', 'Failford', 'Fairfield', 'Fairfield East', 'Fairfield Heights', 'Fairfield West', 'Fairholme', 'Fairlight', 'Fairy Hill', 'Fairy Meadow', 'Falbrook', 'Falconer', 'Falls Creek', 'Far Meadow', 'Fargunyah', 'Farley', 'Farmborough Heights', 'Farnham', 'Farrants Hill', 'Farringdon', 'Fassifern', 'Faulconbridge', 'Faulkland', 'Fawcetts Plain', 'Federal', 'Fennell Bay', 'Fern Bay', 'Fern Gully', 'Fernances', 'Fernances Crossing', 'Fernbank Creek', 'Fernbrook', 'Fernhill', 'Fernleigh', 'Fernmount', 'Fernside', 'Fernvale', 'Ferodale', 'Fiddletown', 'Fifield', 'Figtree', 'Findon Creek', 'Fine Flower', 'Fingal Bay', 'Fingal Head', 'Finley', 'Firefly', 'Fishermans Bay', 'Fishermans Paradise', 'Fishermans Reach', 'Fishers Hill', 'Fishing Point', 'Fitzgeralds Mount', 'Fitzgeralds Valley', 'Fitzroy Falls', 'Five Dock', 'Five Ways', 'Flat Tops', 'Fletcher', 'Flinders', 'Floraville', 'Forbes', 'Forbes Creek', 'Forbes River', 'Forbesdale', 'Fords Bridge', 'Fordwich', 'Forest Glen', 'Forest Grove', 'Forest Hill', 'Forest Land', 'Forest Lodge', 'Forest Reefs', 'Forestville', 'Forresters Beach', 'Forster', 'Fortis Creek', 'Fosters Valley', 'Fosterton', 'Fountaindale', 'Four Corners', 'Four Mile Creek', 'Fowlers Gap', 'Foxground', 'Frazer Park', 'Frazers Creek', 'Frederickton', 'Freeburn Island', 'Freemans', 'Freemans Reach', 'Freemans Waterhole', 'Freemantle', 'French Park', 'Frenchs Forest', 'Freshwater', 'Frog Rock', 'Frogmore', 'Frogs Hollow', 'Frying Pan', 'Fullerton', 'Fullerton Cove', 'Furracabad', 'Gadara', 'Gala Vale', 'Galambine', 'Galong', 'Galore', 'Galston', 'Ganbenang', 'Gangat', 'Ganmain', 'Garah', 'Garden Suburb', 'Garema', 'Garland', 'Garland Valley', 'Garoo', 'Garra', 'Garthowen', 'Gateshead', 'Gearys Flat', 'Geehi', 'Gelston Park', 'Gemalla', 'Geneva', 'Georges Creek', 'Georges Hall', 'Georges Plains', 'Georgetown', 'Georgica', 'Gerogery', 'Gerringong', 'Gerroa', 'Geurie', 'Ghinni Ghi', 'Ghinni Ghinni', 'Ghoolendaadi', 'Giants Creek', 'Gibberagee', 'Gibraltar Range', 'Gidginbung', 'Gidley', 'Gilead', 'Gilgai', 'Gilgandra', 'Gilgooma', 'Gilgunnia', 'Gillenbah', 'Gilletts Ridge', 'Gillieston Heights', 'Gilmandyke', 'Gilmore', 'Gin Gin', 'Gineroi', 'Ginghi', 'Gingkin', 'Girards Hill', 'Girilambone', 'Giro', 'Girral', 'Girralong', 'Girraween', 'Girvan', 'Gladesville', 'Gladstone', 'Glanmire', 'Glebe', 'Gledswood Hills', 'Glen Alice', 'Glen Allen', 'Glen Alpine', 'Glen Davis', 'Glen Elgin', 'Glen Fergus', 'Glen Innes', 'Glen Martin', 'Glen Nevis', 'Glen Oak', 'Glen Ward', 'Glen William', 'Glenbawn', 'Glenbrook', 'Glencoe', 'Glendale', 'Glendenning', 'Glendon', 'Glendon Brook', 'Glenelg', 'Glenellen', 'Glenfield', 'Glenfield Park', 'Glengarrie', 'Glenhaven', 'Gleniffer', 'Glenmore', 'Glenmore Park', 'Glennies Creek', 'Glenning Valley', 'Glenorie', 'Glenquarry', 'Glenreagh', 'Glenridding', 'Glenrock', 'Glenroy', 'Glenthorne', 'Glenugie', 'Glenwood', 'Glenworth Valley', 'Glossodia', 'Gloucester', 'Gloucester Tops', 'Goat Island', 'Gobarralong', 'Gobbagombalin', 'Gocup', 'Godfreys Creek', 'Gogeldrie', 'Gol Gol', 'Gollan', 'Golspie', 'Gongolgon', 'Gonn', 'Goobarragandra', 'Good Forest', 'Good Hope', 'Goodnight', 'Goodooga', 'Goodwood Island', 'Googong', 'Goolgowi', 'Goolhi', 'Goolma', 'Goolmangar', 'Gooloogong', 'Goombargana', 'Goonellabah', 'Goonengerry', 'Goonoo Forest', 'Goonoo Goonoo', 'Goonumbla', 'Goorangoola', 'Goorianawa', 'Gordon', 'Gorge Creek', 'Gormans Hill', 'Gorokan', 'Gosford', 'Gosforth', 'Gostwyck', 'Goulburn', 'Gouldsville', 'Gowan', 'Gowang', 'Gowrie', 'Grabben Gullen', 'Gradys Creek', 'Grafton', 'Gragin', 'Grahamstown', 'Graman', 'Grants Beach', 'Granville', 'Grasmere', 'Grassy Head', 'Grattai', 'Gravesend', 'Grays Point', 'Great Mackerel Beach', 'Great Marlow', 'Green Cape', 'Green Creek', 'Green Forest', 'Green Gully', 'Green Hills', 'Green Pigeon', 'Green Point', 'Green Valley', 'Greenacre', 'Greendale', 'Greenethorpe', 'Greenfield Park', 'Greengrove', 'Greenhill', 'Greenhills Beach', 'Greenlands', 'Greenleigh', 'Greenridge', 'Greenwell Point', 'Greenwich', 'Greenwich Park', 'Greg Greg', 'Gregadoo', 'Gregory Hills', 'Greigs Flat', 'Grenfell', 'Gresford', 'Greta', 'Greta Main', 'Grevillia', 'Greystanes', 'Griffith', 'Grogan', 'Grong Grong', 'Grose Vale', 'Grose Wold', 'Grosses Plain', 'Growee', 'Guerilla Bay', 'Guildford', 'Guildford West', 'Gulargambone', 'Gulf Creek', 'Gulgong', 'Gulmarrad', 'Gum Flat', 'Gum Scrub', 'Gumbalie', 'Gumble', 'Gumly Gumly', 'Gumma', 'Gunbar', 'Gundagai', 'Gundamulda', 'Gundaroo', 'Gundary', 'Gunderbooka', 'Gunderman', 'Gundy', 'Gungal', 'Gungalman', 'Gunnedah', 'Gunning', 'Gunning Gap', 'Gunningbland', 'Gunningrah', 'Gurley', 'Gurnang', 'Gurranang', 'Gurrundah', 'Guyong', 'Guyra', 'Gwabegar', 'Gwandalan', 'Gwynneville', 'Gymea', 'Gymea Bay', 'Haberfield', 'Hacks Ferry', 'Halekulani', 'Halfway Creek', 'Hallidays Point', 'Halloran', 'Halls Creek', 'Hallsville', 'Halton', 'Hambledon Hill', 'Hamilton', 'Hamilton East', 'Hamilton North', 'Hamilton South', 'Hamilton Valley', 'Hamlyn Terrace', 'Hammondville', 'Hampden Hall', 'Hampton', 'Hanging Rock', 'Hanleys Creek', 'Hannam Vale', 'Hanwood', 'Harden', 'Hardys Bay', 'Harefield', 'Hargraves', 'Harolds Cross', 'Harparary', 'Harpers Hill', 'Harrington', 'Harrington Park', 'Harris Park', 'Hartley', 'Hartley Vale', 'Hartwood', 'Hartys Plains', 'Harwood', 'Hassall Grove', 'Hassans Walls', 'Hastings Point', 'Hat Head', 'Hatfield', 'Havilah', 'Hawkesbury Heights', 'Hawks Nest', 'Hay', 'Hay South', 'Hayes Gap', 'Haymarket', 'Haystack', 'Hayters Hill', 'Haywards Bay', 'Hazelbrook', 'Hazelgrove', 'Heathcote', 'Heatherbrae', 'Hebden', 'Hebersham', 'Heckenberg', 'Heddon Greta', 'Heifer Station', 'Helensburgh', 'Henley', 'Henty', 'Hereford Hall', 'Hermidale', 'Hermitage Flat', 'Hernani', 'Herons Creek', 'Hexham', 'Hickeys Creek', 'High Range', 'Higher Macdonald', 'Highfields', 'Hill End', 'Hill Top', 'Hilldale', 'Hillgrove', 'Hillsborough', 'Hillsdale', 'Hillston', 'Hillville', 'Hillvue', 'Hinchinbrook', 'Hinton', 'Hobartville', 'Hobbys Yards', 'Hogarth Range', 'Holbrook', 'Holgate', 'Hollisdale', 'Hollydeen', 'Holmesville', 'Holroyd', 'Holsworthy', 'Holts Flat', 'Home Rule', 'Homebush', 'Homebush West', 'Homeleigh', 'Honeybugle', 'Hopefield', 'Hopkins Creek', 'Horningsea Park', 'Hornsby', 'Hornsby Heights', 'Horse Station Creek', 'Horseshoe Bend', 'Horseshoe Creek', 'Horsfield Bay', 'Horsley', 'Horsley Park', 'Hoskinstown', 'Hovells Creek', 'Howards Grass', 'Howell', 'Howes Valley', 'Howick', 'Howlong', 'Hoxton Park', 'Humula', 'Hungerford', 'Hunters Hill', 'Hunterview', 'Huntingdon', 'Huntingwood', 'Huntley', 'Huntleys Cove', 'Huntleys Point', 'Huonbrook', 'Hurlstone Park', 'Hurstville', 'Hurstville Grove', 'Huskisson', 'Hyams Beach', 'Hyland Park', 'Hyndmans Creek', 'Ilarwill', 'Ilford', 'Illabo', 'Illaroo', 'Illawong', 'Iluka', 'Indi', 'Ingebirah', 'Ingleburn', 'Ingleside', 'Innes View', 'Inverell', 'Invergordon', 'Invergowrie', 'Iron Pot Creek', 'Ironbark', 'Ironmungy', 'Irvington', 'Irymple', 'Isabella', 'Islington', 'Ivanhoe', 'Jackadgery', 'Jacks Creek', 'Jacksons Flat', 'Jacky Bulbin Flat', 'Jagumba', 'Jagungal Wilderness', 'Jamberoo', 'James Creek', 'Jamisontown', 'Jannali', 'Jaspers Brush', 'Jaunter', 'Jeir', 'Jellat Jellat', 'Jemalong', 'Jembaicumbene', 'Jennings', 'Jenolan', 'Jeogla', 'Jerangle', 'Jeremadra', 'Jeremy', 'Jerilderie', 'Jerrabattgulla', 'Jerrabomberra', 'Jerrara', 'Jerrawa', 'Jerrawangala', 'Jerrong', 'Jerrys Plains', 'Jerseyville', 'Jesmond', 'Jewells', 'Jews Lagoon', 'Jiggi', 'Jilliby', 'Jimenbuen', 'Jincumbilly', 'Jindabyne', 'Jinden', 'Jindera', 'Jingellic', 'Jingera', 'Joadja', 'Joes Box', 'Johns River','Jolly Nose','Jones Bridge','Jones Creek','Jones Island','Jordan Springs','Judds Creek','Jugiong','Junction Hill','Junee','Junee Reefs','Kahibah','Kains Flat', 'Kalang','Kalaru','Kalkite','Kamarah','Kameruka','Kanahooka','Kanangra','Kandos','Kangaloon','Kangaroo Creek','Kangaroo Point','Kangaroo Valley','Kangaroobie','Kangiara','Kangy Angy','Kanimbla','Kanoona','Kanwal','Kapooka','Kaputar','Karaak Flat','Karabar','Karangi','Kareela','Kariong','Kars Springs','Karuah','Katoomba','Kayuga','Kearns','Kearsley','Keepit','Keera','Keerrong','Keinbah','Keiraville','Keith Hall','Kellys Plains','Kellyville','Kellyville Ridge','Kelso','Kelvin','Kembla Grange','Kembla Heights','Kemps Creek','Kempsey','Kendall','Kenebri','Kennaicle Creek','Kensington','Kenthurst','Kentlyn','Kentucky','Kentucky South','Kerewong','Keri Keri','Kerrabee','Kerrigundi','Kerrs Creek','Kew','Keybarbin','Khancoban','Khatambuhl','Kia Ora','Kiacatoo','Kiah','Kiama','Kiama Downs','Kiama Heights','Kianga','Kiar','Kickabil','Kielvale','Kikiamah','Kikoira','Kilaben Bay','Kilgin','Kilgra','Killabakh','Killara','Killarney Heights','Killarney Vale','Killawarra','Killcare','Killcare Heights','Killiekrankie','Killimicat','Killingworth','Killongbutta','Kimbriki','Kinchela','Kincumber','Kincumber South','Kindee','Kindervale','King Creek','Kingfisher Shores','Kinghorne','Kings Forest','Kings Langley','Kings Park','Kings Plains','Kings Point','Kingscliff','Kingsdale','Kingsford','Kingsgate','Kingsgrove','Kingsland','Kingstown','Kingsvale','Kingswood','Kioloa','Kiora','Kippara','Kippaxs','Kippenduff','Kirkconnell','Kirkham','Kirrawee','Kirribilli','Kitchener','Kiwarrak','Klori','Knights Hill','Knockrow','Knorrit Flat','Knorrit Forest','Kogarah','Kogarah Bay','Kooba','Kookabookra','Koolewong','Koolkhan','Koonawarra','Koonorigan','Koonyum Range','Kooragang','Koorainghat','Koorawatha','Kooringal','Kootingal','Koraleigh','Koreelah','Korora','Kosciuszko','Kosciuszko National Park','Kotara','Kotara South','Krambach','Krawarree','Kremnos','Ku-Ring-Gai Chase','Kulnura','Kulwin','Kunama','Kundabung','Kundibakh','Kundle Kundle','Kungala','Kunghur','Kunghur Creek','Kurmond','Kurnell','Kurraba Point','Kurrajong','Kurrajong Heights','Kurrajong Hills','Kurri Kurri','Kyalite','Kyarran','Kybeyan','Kyeamba','Kyeemagh','Kyle Bay','Kynnumboon','Kyogle','La Perouse','Lacmalac','Lade Vale','Ladysmith','Laffing Waters','Laggan','Lagoon Grass','Laguna','Lake Albert','Lake Bathurst','Lake Brewster','Lake Burrendong','Lake Cargelligo','Lake Cathie','Lake Conjola','Lake Cowal','Lake George','Lake Haven','Lake Heights','Lake Hume Village','Lake Illawarra','Lake Innes','Lake Macquarie','Lake Munmorah','Lake Tabourie','Lake Wyangan','Lakelands','Lakemba','Lakesland','Lakewood','Lalalty','Lalor Park','Lambs Valley','Lambton','Landervale','Lane Cove','Lane Cove North','Lane Cove West','Langley Vale','Lanitza','Lankeys Creek','Lansdowne','Lansdowne Forest','Lansvale','Lapstone','Larbert','Largs','Larnook','Larras Lee','Laughtondale','Laurel Hill','Laurieton','Lavadia','Lavender Bay','Laverstock','Lavington','Lawrence','Lawson','Leadville','Leconfield','Lee Creek','Leeton','Leets Vale','Leeville','Legume','Leichhardt','Lemington','Lemon Tree','Lemon Tree Passage','Len Waters Estate','Lenaghan','Lennox Head','Leonay','Leppington','Lerida','Lethbridge Park','Leumeah','Leura','Levenstrath','Lewinsbrook','Lewis Ponds','Lewisham','Leycester','Liberty Grove','Lidcombe','Liddell','Lidsdale','Lidster','Lightning Ridge','Lilli Pilli','Lillian Rock','Lilydale','Lilyfield','Lilyvale','Limbri','Limeburners Creek','Limekilns','Limerick','Limestone','Limpinwood','Linburn','Linden','Lindendale','Lindesay','Lindesay Creek','Lindfield','Lindifferon','Linley Point','Lionsville','Lisarow','Lismore','Lismore Heights','Liston','Lithgow','Little Back Creek','Little Bay','Little Billabong','Little Forest','Little Hartley','Little Jacks Creek','Little Jilliby','Little Pelican','Little Plain','Little River','Little Topar','Little Wobby','Littleton','Liverpool','Llanarth','Llandilo','Llangothlin','Lloyd','Loadstone','Lochiel','Lochinvar','Lockhart','Locksley','Loftus','Loftville','Logans Crossing','Logie Brae','Londonderry','Long Beach','Long Flat','Long Jetty','Long Plain','Long Point','Longarm','Longreach','Longueville','Loomberah','Lord Howe Island','Lords Hill','Lorn','Lorne','Lost River','Lostock','Louisa Creek','Louth','Louth Park','Lovedale','Lovett Bay','Lowanna','Lower Acacia Creek','Lower Bago','Lower Belford','Lower Boro','Lower Bottle Creek','Lower Creek','Lower Duck Creek','Lower Dyraaba','Lower Lewis Ponds','Lower Macdonald','Lower Mangrove','Lower Pappinbarra','Lower Peacock','Lower Portland','Lower Southgate','Lowesdale','Lowther','Loxford','Lucas Heights','Lucknow','Luddenham','Lue','Lugarno','Lurnea','Luskintyre','Lynchs Creek','Lyndhurst','Lynwood','Mabins Well','Macdonalds Creek','Macksville','Maclean','Macmasters Beach','Macquarie Fields','Macquarie Hills','Macquarie Links','Macquarie Marshes','Macquarie Park','Macquarie Pass','Maddens Plains','Maffra','Magenta','Magometon','Maianbar','Maimuru','Main Arm','Main Creek','Mairjimmy','Maison Dieu','Maitland','Maitland Bar','Maitland Vale','Majors Creek','Malabar','Maldon','Mallabula','Mallan','Mallanganee','Mallee','Mallowa','Maloneys Beach','Malua Bay','Manar','Manchester Square','Mandagery','Mandalong','Mandemar','Mandurama','Mangerton','Mangoola','Mangoplah','Mangrove Creek','Mangrove Mountain','Manildra','Manilla','Manly','Manly Vale','Mannering Park','Manning Point','Mannus','Manobalai','Manton','Manyana','Maragle','Maraylya','Marayong','March','Marchmont','Mardi','Marengo','Mares Run','Marinna','Marks Point','Markwell','Marlee','Marlo Merrican','Marlow','Marlowe','Marmong Point','Marom Creek','Maroota','Maroubra','Marrangaroo','Marrar','Marrickville','Marsden Park','Marsfield','Marshall Mount','Marshdale','Marthaguy','Martindale','Martins Creek','Martinsville','Marulan','Maryland','Marys Mount','Maryvale','Maryville','Mascot','Matcham','Matheson','Mathoura','Matong','Matraville','Maude','Maules Creek','Maxwell','Maybole','Mayers Flat','Mayfield','Mayfield East','Mayfield North','Mayfield West','Mayrung','Mays Hill','Mayvale','McCullys Gap','McDougalls Hill','McGraths Hill','McKees Hill','McKellars Park','McLeans Ridges','McLeods Shoot','McMahons Point','McMahons Reef','Meadow Flat', 'Meadowbank','Mebbin','Mebul','Medlow Bath','Medowie','Medway','Meerschaum Vale','Megalong Valley','Megan','Melbergen','Melinga','Mellong','Mellool','Melrose Park','Melville','Memagong','Menah','Menai','Menangle','Menangle Park','Mendooran','Menindee','Merah North','Merewether','Merewether Heights','Merimbula','Meringo','Mernot','Meroo','Meroo Meadow','Merotherie','Merriangaah','Merricumbene','Merrigal','Merrill','Merriwa','Merriwagga','Merrygoen','Merrylands','Merrylands West','Merungle Hill','Meryla','Metford','Methul','Metz','Miamley','Miandetta','Micalo Island','Michelago','Middle Arm','Middle Brook','Middle Brother','Middle Cove','Middle Dural','Middle Falbrook','Middle Flat','Middle Pocket','Middleton Grange','Middlingbank','Midginbil','Mihi','Mila','Milbrodale','Milbrulong','Milkers Flat','Millah Murrah','Millbank','Miller','Millers Forest','Millers Point','Millfield','Millie','Millingandi','Millthorpe','Milparinka','Milperra','Milroy','Milsons Passage','Milsons Point','Milton','Milvale','Mimosa','Minchinbury','Mindaribba','Mingoola','Minimbah','Minjary','Minmi','Minnamurra','Minnie Water','Minore','Minto','Minto Heights','Mirador','Miranda','Mirannie','Mirrabooka','Mirrool','Missabotti','Mitchell','Mitchells Flat','Mitchells Island','Mittagong','Moama','Modanville','Mogareeka','Mogendoura','Moggs Swamp','Mogilla','Mogo','Mogo Creek','Mogood','Mograni','Mogriguy','Mole River','Moleville Creek','Mollyan','Mollymook','Mollymook Beach','Molong','Mona Vale','Monak','Monaltrie','Mondayong','Mondrook','Monga','Mongarlowe','Mongogarie','Monia Gap','Monivae','Monkerai','Monteagle','Montecollum','Montefiores','Monterey','Mooball','Moobi','Moogem','Mookerawa','Mookima Wybra','Moolarben','Moollattoo','Moolpa','Moombooldool','Moonan Brook','Moonan Flat','Moonbah','Moonbi','Moonbria','Mooneba','Moonee','Moonee Beach','Mooney Mooney','Mooney Mooney Creek','Moonpar','Mooral Creek','Moorara','Moorbel','Moore Creek','Moore Park','Moorebank','Moorilda','Moorland','Moorong','Moorwatha','Moparrabah','Moppy','Morago','Morangarell','Morans Crossing','Moree','Morisset','Morisset Park','Morning Bay','Mororo','Morpeth','Mortdale','Mortlake','Morton','Mortons Creek','Morts Estate','Morundah','Moruya','Moruya Heads','Morven','Mosman','Moss Vale','Mossgiel','Mossy Point','Moto','Moulamein','Mount Adrah','Mount Annan','Mount Aquila','Mount Arthur','Mount Austin','Mount Burrell','Mount Colah','Mount Collins','Mount Cooper','Mount Darragh','Mount David','Mount Dee','Mount Druitt','Mount Elliot','Mount Fairy','Mount Foster','Mount Frome','Mount George','Mount Harris','Mount Hope','Mount Horeb','Mount Hunter','Mount Hutton','Mount Irvine','Mount Keira','Mount Kembla','Mount Kingiman','Mount Knowles','Mount Kuring-Gai','Mount Lambie','Mount Lewis','Mount Lindsey','Mount Marsden','Mount Marsh','Mount Mitchell','Mount Murray','Mount Olive','Mount Ousley','Mount Panorama','Mount Pleasant','Mount Pritchard','Mount Rankin','Mount Rivers','Mount Riverview','Mount Royal','Mount Russell','Mount Saint Thomas','Mount Seaview','Mount Tenandra','Mount Thorley','Mount Tomah','Mount Vernon','Mount Victoria','Mount View','Mount Vincent','Mount Warning','Mount Warrigal','Mount Werong','Mount White','Mount Wilson','Mountain Creek','Mountain Lagoon','Mountain Top','Mountain View','Mourquong','Mowbray Park','Mozart','Mudgee','Mulbring','Mulgoa','Mulgrave','Mulguthrie','Muli Muli','Mulla','Mulla Creek','Mullaley','Mullamuddy','Mullaway','Mullengandra','Mullengudgery','Mullion','Mullion Creek','Mulloon','Mullumbimby','Mullumbimby Creek','Mulwala','Mulyandry','Mumbil','Mumblebone Plain','Mumbulla Mountain','Mummel','Mummulgum','Mundamia','Mundarlo','Munderoo','Mundongo','Mungay Creek','Munghorn','Mungindi','Mungo','Mungo Brush','Munni','Munyabla','Murga','Murrah','Murrami','Murrawombie','Murray Downs','Murray Gorge','Murrays Beach','Murrays Run','Murrengenburg','Murrin Bridge','Murringo','Murrulebale','Murrumbateman','Murrumbo','Murrumbucca','Murrumburrah','Murrurundi','Murulla','Murwillumbah','Muscle Creek','Muswellbrook','Mutawintji','Muttama','Myall Creek','Myall Lake','Myall Park','Myalla','Mylestom','Mylneford','Myocum','Myola','Myrtle Creek','Myrtle Mountain','Myrtle Park','Myrtleville','Mystery Bay','Myuna Bay','Nabiac','Nadgee','Nambucca Heads','Namoi River','Nana Glen','Nangus','Nanima','Napier Lane','Napoleon Reef','Naradhan','Narara','Narellan','Narellan Vale','Naremburn','Narone Creek','Narooma','Narrabarba','Narrabeen','Narrabri','Narraburra','Narran Lake','Narrandera','Narrangullen','Narrawa','Narrawallee','Narraweena','Narromine','Narwee','Nashdale','Nashua','Nattai','Naughtons Gap','Neath','Nebea','Neilrex','Nelligen','Nelson','Nelson Bay','Nelsons Plains','Nelungaloo','Nemingha','Nericon','Neringla','Nerong','Nerriga','Nerrigundah','Nethercote','Neurea','Neutral Bay','Never Never','Nevertire','Neville','New Berrima','New Brighton','New Buildings','New Italy','New Lambton','New Lambton Heights','New Mexico','New Park','New Valley','Newbold','Newbridge','Newcastle','Newcastle East','Newcastle West','Newee Creek','Newington','Newnes','Newnes Plateau', 'Newport','Newrybar','Newstead','Newton Boyd','Newtown','Niagara Park','Niangala','Niemur','Nightcap','Nimbin','Nimmitabel','Nimmo','Nobbys Creek','Nombi','Noona','Noorong','Nooroo','Norah Head','Noraville','Nords Wharf','Normanhurst','North Albury','North Arm','North Arm Cove','North Avoca','North Balgowlah','North Batemans Bay','North Boambee Valley','North Bondi','North Bourke','North Brother','North Casino','North Curl Curl','North Dorrigo','North Epping','North Gosford','North Haven','North Lambton','North Lismore','North Macksville','North Macquarie','North Manly','North Narooma','North Narrabeen','North Nowra','North Parramatta','North Richmond','North Rocks','North Rothbury','North Ryde','North Shore','North St Marys','North Star','North Strathfield','North Sydney','North Tamworth','North Tumbulgum','North Turramurra','North Wagga Wagga','North Wahroonga','North Willoughby','North Wollongong','North Woodburn','North Yalgogrin','North Yeoval','Northangera','Northbridge','Northmead','Northwood','Norway','Nowendoc','Nowley','Nowra','Nowra Hill','Nubba','Nulkaba','Nullamanna','Nullica','Nullo Mountain','Numbaa','Number One','Numbla Vale','Numbugga','Numeralla','Numinbah','Numulgi','Nunderi','Nundle','Nungatta','Nungatta South','Nurenmerenmong','Nymagee','Nymboida','Nyngan','Nyora','Nyrang Creek','O\'Connell','Oak Flats','Oakdale','Oakey Park','Oakhampton','Oakhampton Heights','Oakhurst','Oaklands','Oakville','Oakwood','Oallen','Oatlands','Oatley','Oban','Obanvale','Oberne Creek','Oberon','Obley','Ocean Shores','Ogunbil','Old Adaminaby','Old Bar','Old Bonalbo','Old Erowal Bay','Old Grevillia','Old Guildford','Old Junee','Old Mill','Old Station','Old Toongabbie','Olinda','Olney','Omadale','One Mile','One Tree','Oolong','Ooma','Ootha','Ophir','Oran Park','Orange','Orange Grove','Orangeville','Orchard Hills','Orient Point','Orton Park','Osborne','Osterley','Oswald','Otford','Oura','Ourimbah','Ournie','Owens Gap','Oxford Falls','Oxley','Oxley Island','Oxley Park','Oxley Vale','Oyster Bay','Oyster Cove','Packsaddle','Paddington','Paddys Flat','Paddys River','Padstow','Padstow Heights','Pagans Flat','Pages Creek','Pages River','Pagewood','Palarang','Palerang','Paling Yards','Pallal','Pallamallawa','Palm Beach','Palm Grove','Palmdale','Palmers Channel','Palmers Island','Palmers Oaky','Palmvale','Palmwoods','Pambula','Pambula Beach','Pampoolah','Pan Ban','Panania','Pangee','Panuara','Pappinbarra','Para','Paradise','Paringi','Parkes','Parkesbourne','Parklea','Parkville','Parma','Parramatta','Parraweena','Patchs Beach','Paterson','Patonga','Paupong','Paxton','Paynes Crossing','Paytens Bridge','Peacock Creek','Peak Hill','Peak View','Peakhurst','Peakhurst Heights','Pearces Creek','Pearl Beach','Peats Ridge','Pebbly Beach','Peel','Peelwood','Pejar','Pelaw Main','Pelican','Pelton','Pembrooke','Pemulwuy','Pendle Hill','Pennant Hills','Penrith','Penrose','Penshurst','Pericoe','Perrys Crossing','Perthville','Petersham','Pheasants Nest','Phegans Bay','Phillip Bay','Phoenix Park','Piallamore','Piallaway','Piambong','Picketts Valley','Picnic Point','Picton','Pigeonbah','Piggabeen','Pikapene','Pillar Valley','Pilliga','Pilot Wilderness','Pimlico','Pimlico Island','Pinbeyan','Pindaroi','Pindimar','Pine Camp','Pine Clump','Pine Grove','Pine Lodge','Pine Ridge','Pine Valley','Piney Range','Pinkett','Pinnacle','Pinnacle Swamp','Pinny Beach','Piora','Pipeclay','Pitnacree','Pitt Town','Pitt Town Bottoms','Pleasant Hills','Pleasure Point','Plumpton','Point Clare','Point Frederick','Point Piper','Point Wolstoncroft','Pointer Mountain','Pokolbin','Pola Creek','Polo Flat','Pomeroy','Pomona','Ponto','Pooncarie','Port Botany','Port Hacking','Port Kembla','Port Macquarie','Port Stephens','Porters Creek','Porters Retreat','Portland','Possum Brush','Possum Creek','Potato Point','Pottery Estate','Potts Hill','Potts Point','Pottsville','Prairiewood','Premer','Prestons','Pretty Beach','Pretty Pine','Primbee','Primrose Valley','Prospect','Pucawan','Puddledock','Pulganbar','Pullabooka','Pulletop','Pumpenbil','Punchbowl','Purfleet','Purlewaugh','Putney','Putta Bucca','Putty','Pyangle','Pymble','Pyramul','Pyree','Pyrmont','Quaama','Quakers Hill','Quambone','Quanda','Quandary','Quandialla','Queanbeyan','Queanbeyan East','Queanbeyan West','Queens Park','Queens Pinch','Queenscliff','Quialigo','Quidong','Quiera','Quipolly','Quirindi','Quorrobolong','Raby','Raglan','Rainbow Flat','Rainbow Reach','Raleigh','Ramornie','Ramsgate','Ramsgate Beach','Rand','Randwick','Rangari','Rangers Valley','Rankin Park','Rankins Springs','Rannock','Rappville','Rathmines','Ravensdale','Ravenswood','Ravensworth','Rawdon Island','Rawdon Vale','Raworth','Rawsonville','Raymond Terrace','Razorback','Red Head','Red Hill','Red Range','Red Rock','Red Rocks','Redbank','Redbournberry','Reddestone','Redfern','Redhead','Redlands','Reedy Creek','Reedy Swamp','Reefton','Regents Park','Regentville','Reids Flat','Reidsdale','Rennie','Renwick','Repentance Creek','Repton','Reserve Creek','Retreat','Revesby','Revesby Heights','Rhine Falls','Rhodes','Richlands','Richmond','Richmond Hill','Richmond Lowlands','Richmond Vale', 'Rileys Hill', 'Ringwood', 'Riverlea', 'Riverside', 'Riverstone', 'Rivertree', 'Riverview', 'Riverwood', 'Rixs Creek', 'Rob Roy', 'Robertson', 'Robin Hill', 'Rock Flat', 'Rock Forest', 'Rock Valley', 'Rockdale', 'Rockley', 'Rockley Mount', 'Rockton', 'Rocky Creek', 'Rocky Glen', 'Rocky Hall', 'Rocky Plain', 'Rocky Point', 'Rocky River', 'Rodd Point', 'Rollands Plains', 'Rookhurst', 'Rookwood', 'Rooty Hill', 'Ropers Road', 'Ropes Crossing', 'Rose Bay', 'Rose Valley', 'Rosebank', 'Roseberg', 'Roseberry', 'Roseberry Creek', 'Rosebery', 'Rosebrook', 'Rosedale', 'Rosehill', 'Roselands', 'Rosemeadow', 'Rosemeath', 'Roseville', 'Roseville Chase', 'Rosewood', 'Roslyn', 'Rossglen', 'Rossgole', 'Rossi', 'Rossmore', 'Roto', 'Rouchel', 'Rouchel Brook', 'Roughit', 'Round Mountain', 'Round Swamp', 'Rous', 'Rous Mill', 'Rouse Hill', 'Rowan', 'Rowena', 'Rowlands Creek', 'Royal National Park', 'Royalla', 'Rozelle', 'Ruby Creek', 'Rufus', 'Rugby', 'Rukenvale', 'Run-o-Waters', 'Running Stream', 'Runnyford', 'Ruse', 'Rushcutters Bay', 'Rushes Creek', 'Rushforth', 'Russell Lea', 'Russell Vale', 'Rutherford', 'Ruthven', 'Ryan', 'Rydal', 'Rydalmere', 'Ryde', 'Rye Park', 'Ryhope', 'Rylstone', 'Sackville', 'Sackville North', 'Saddleback Mountain', 'Sadleir', 'Safety Beach', 'Salamander Bay', 'Salisbury', 'Salisbury Plains', 'Sallys Flat', 'Salt Ash', 'Saltwater', 'San Isidore', 'San Remo', 'Sancrox', 'Sanctuary Point', 'Sandbar', 'Sandgate', 'Sandigo', 'Sandilands', 'Sandon', 'Sandringham', 'Sandy Beach', 'Sandy Creek', 'Sandy Crossing', 'Sandy Flat', 'Sandy Gully', 'Sandy Hill', 'Sandy Hollow', 'Sandy Point', 'Sanger', 'Sans Souci', 'Sapphire', 'Sapphire Beach', 'Saratoga', 'Sassafras', 'Saumarez', 'Saumarez Ponds', 'Savernake', 'Sawpit Creek', 'Sawtell', 'Sawyers Gully', 'Scarborough', 'Scheyville', 'Schofields', 'Scone', 'Scotia', 'Scotland Island', 'Scotts Creek', 'Scotts Flat', 'Scotts Head', 'Seaforth', 'Seaham', 'Seahampton', 'Seal Rocks', 'Sebastopol', 'Sedgefield', 'Seelands', 'Sefton', 'Segenhoe', 'Seven Hills', 'Seven Oaks', 'Sextonville', 'Shadforth', 'Shallow Bay', 'Shalvey', 'Shanes Park', 'Shannon Brook', 'Shannon Vale', 'Shannondale', 'Shannons Flat', 'Shark Creek', 'Sharps Creek', 'Sheedys Gully', 'Shell Cove', 'Shellharbour', 'Shellharbour City Centre', 'Shelly Beach', 'Sherwood', 'Shoal Bay', 'Shoalhaven Heads', 'Shooters Hill', 'Shortland', 'Silent Grove', 'Silverdale', 'Silverton', 'Silverwater', 'Simpkins Creek', 'Singleton', 'Singleton Heights', 'Singleton Military Area', 'Singletons Mill', 'Six Mile Swamp', 'Skennars Head', 'Skillion Flat', 'Skinners Shoot', 'Sleepy Hollow', 'Smeaton Grange', 'Smithfield', 'Smiths Creek', 'Smiths Lake', 'Smithtown', 'Snakes Plain', 'Snowball', 'Snowy Plain', 'Sodwalls', 'Sofala', 'Soldiers Point', 'Somersby', 'Somerton', 'South Albury', 'South Arm', 'South Ballina', 'South Bathurst', 'South Bowenfels', 'South Coogee', 'South Durras', 'South Golden Beach', 'South Grafton', 'South Granville', 'South Gundagai', 'South Gundurimba', 'South Guyra', 'South Hurstville', 'South Kempsey', 'South Lismore', 'South Littleton', 'South Maitland', 'South Maroota', 'South Murwillumbah', 'South Nowra', 'South Pambula', 'South Penrith', 'South Tamworth', 'South Turramurra', 'South Wentworthville', 'South West Rocks', 'South Windsor', 'South Wolumla', 'Southampton', 'Southgate', 'Speers Point', 'Speewa', 'Spencer', 'Spicers Creek', 'Spicketts Creek', 'Splitters Creek', 'Spring Creek', 'Spring Farm', 'Spring Flat', 'Spring Grove', 'Spring Hill', 'Spring Mountain', 'Spring Plains', 'Spring Ridge', 'Spring Terrace', 'Springdale', 'Springdale Heights', 'Springfield', 'Springrange', 'Springside', 'Springvale', 'Springwood', 'St Albans', 'St Andrews', 'St Clair', 'St Fillans', 'St George', 'St Georges Basin', 'St Helens Park', 'St Huberts Island', 'St Ives', 'St Ives Chase', 'St Johns Park', 'St Leonards', 'St Marys', 'St Peters', 'Stanborough', 'Stanbridge', 'Stanford Merthyr', 'Stanhope', 'Stanhope Gardens', 'Stanmore', 'Stannifer', 'Stannum', 'Stanwell Park', 'Stanwell Tops', 'State Mine Gully', 'Steam Plains', 'Steeple Flat', 'Stewarts Brook', 'Stewarts River', 'Stockinbingal', 'Stockrington', 'Stockton', 'Stockyard Creek', 'Stokers Siding', 'Stonehenge', 'Stonequarry', 'Stony Chute', 'Stony Creek', 'Stony Crossing', 'Stotts Creek', 'Stratford', 'Strathcedar', 'Stratheden', 'Strathfield', 'Strathfield South', 'Stroud', 'Stroud Hill', 'Stroud Road', 'Stuart Town', 'Stuarts Point', 'Stubbo', 'Stud Park', 'Suffolk Park', 'Sugarloaf', 'Summer Hill', 'Summer Hill Creek', 'Summer Island', 'Summerland Point', 'Sun Valley', 'Sunny Corner', 'Sunset Strip', 'Sunshine', 'Sunshine Bay', 'Suntop', 'Surf Beach', 'Surfside', 'Surry Hills', 'Sussex Inlet', 'Sutherland', 'Sutton', 'Sutton Forest', 'Swan Bay', 'Swan Creek', 'Swan Vale', 'Swanbrook', 'Swanhaven', 'Swans Crossing', 'Swansea', 'Swansea Heads', 'Sweetmans Creek', 'Sydenham', 'Sydney', 'Sydney Olympic Park', 'Sylvania', 'Sylvania Waters', 'Tabbil Creek', 'Tabbimoble', 'Tabbita', 'Table Top', 'Tabulam', 'Tacoma', 'Tacoma South', 'Tahlee', 'Tahmoor', 'Talarm', 'Talawanta', 'Talbingo', 'Tallawang', 'Tallimba', 'Tallong', 'Tallowal', 'Tallowwood Ridge', 'Tallwood', 'Tallwoods Village', 'Talmalmo', 'Talofa', 'Taloumbi', 'Tamarama', 'Tamban', 'Tambar Springs', 'Tambaroora', 'Taminda', 'Tamworth', 'Tanglewood', 'Tanilba Bay', 'Tanja', 'Tannabar', 'Tannas Mount', 'Tantangara', 'Tantawangalo', 'Tantonan', 'Tapitallee', 'Tara', 'Taradale', 'Tarago', 'Taralga', 'Tarana', 'Tarban', 'Tarbuck Bay', 'Tarcutta', 'Taree', 'Taree South', 'Taren Point', 'Tarlo', 'Tarraganda', 'Tarrawanna', 'Tarriaro', 'Tarro', 'Tascott', 'Tatham', 'Tathra', 'Tatton', 'Taylors Arm', 'Taylors Beach', 'Taylors Flat', 'Tea Gardens', 'Telarah', 'Telegraph Point', 'Telopea', 'Temagog', 'Temora', 'Tempe', 'Ten Mile Hollow', 'Tenambit', 'Tenandra', 'Tennyson', 'Tennyson Point', 'Tenterden', 'Tenterfield', 'Teralba', 'Terania Creek', 'Terara', 'Teridgerie', 'Termeil', 'Terrabella', 'Terrace Creek', 'Terragon', 'Terramungamine', 'Terranora', 'Terreel', 'Terrey Hills', 'Terrigal', 'Terry Hie Hie', 'Teven', 'Tewinga', 'Texas', 'Thalgarrah', 'Tharbogang', 'The Angle', 'The Bight', 'The Branch', 'The Brothers', 'The Channon', 'The Devils Wilderness', 'The Entrance', 'The Entrance North', 'The Freshwater', 'The Gap', 'The Glen', 'The Gulf', 'The Hatch', 'The Hill', 'The Junction', 'The Lagoon', 'The Marra', 'The Meadows', 'The Oaks', 'The Pilliga', 'The Pinnacles', 'The Pocket', 'The Ponds', 'The Ridgeway', 'The Risk', 'The Rock', 'The Rocks', 'The Sandon', 'The Slopes', 'The Whiteman', 'Theresa Creek', 'Theresa Park', 'Thirldene', 'Thirlmere', 'Thirroul', 'Thora', 'Thornleigh', 'Thornton', 'Thrumster', 'Thuddungra', 'Thule', 'Thumb Creek', 'Thurgoona', 'Thyra', 'Tianjara', 'Tibbuc', 'Tibooburra', 'Tichborne', 'Tichular', 'Tighes Hill', 'Tilba Tilba', 'Tilbuster', 'Tilligerry Creek', 'Tilpa', 'Timbarra', 'Timbillica', 'Timbumburi', 'Timor', 'Tindarey', 'Tinderry', 'Tingha', 'Tingira Heights', 'Tinonee', 'Tinpot', 'Tintenbar', 'Tintinhull', 'Tiona', 'Tipperary', 'Tiri', 'Tirrannaville', 'Titaatee Creek', 'Tocal', 'Tocumwal', 'Tolland', 'Tolwong', 'Tomago', 'Tomakin', 'Tomalla', 'Tombong', 'Tomboye', 'Tomerong', 'Tomewin', 'Tomingley', 'Tomki', 'Toms Creek', 'Tonderburine', 'Tongarra', 'Toogong', 'Tooleybuc', 'Toolijooa', 'Tooloom', 'Tooloon', 'Tooma', 'Toongabbie', 'Toongi', 'Toonumbar', 'Tooranie', 'Tooraweenah', 'Toormina', 'Toorooka', 'Toothdale', 'Tootool', 'Toowoon Bay', 'Topi Topi', 'Toronto', 'Torrington', 'Torryburn', 'Totnes Valley', 'Tottenham', 'Touga', 'Toukley', 'Towallum', 'Towamba', 'Townsend', 'Towradgi', 'Towrang', 'Tralee', 'Trangie', 'Tregeagle', 'Tregear', 'Trenayr', 'Trentham Cliffs', 'Trewilga', 'Triamble', 'Triangle Flat', 'Trundle', 'Trungley Hall', 'Trunkey Creek', 'Tubbamurra', 'Tubbul', 'Tucabia', 'Tucki Tucki', 'Tuckombil', 'Tuckurimba', 'Tuena', 'Tuggerah', 'Tuggerawong', 'Tugrabakh', 'Tullakool', 'Tullamore', 'Tullarwalla', 'Tullera', 'Tullibigeal', 'Tullimbar', 'Tulloona', 'Tullymorgan', 'Tumbarumba', 'Tumbi Umbi', 'Tumblong', 'Tumbulgum', 'Tumorrama', 'Tumut', 'Tumut Plains', 'Tuncester', 'Tuncurry', 'Tunglebung', 'Tuntable Creek', 'Tuppal', 'Tura Beach', 'Turill', 'Turlinjah', 'Turners Flat', 'Turondale', 'Tuross', 'Tuross Head', 'Turramurra', 'Turrawan', 'Turrella', 'Turvey Park', 'Tweed Heads', 'Tweed Heads South', 'Tweed Heads West', 'Twelve Mile', 'Twelve Mile Creek', 'Twelve Mile Peg', 'Twenty Forests', 'Twin Rivers', 'Two Mile Flat', 'Tyagarah', 'Tyalgum', 'Tyalgum Creek', 'Tygalgah', 'Tyndale', 'Tyringham', 'Uarbry', 'Uki', 'Ulamambri', 'Ulan', 'Ulladulla', 'Ulmarra', 'Ulong', 'Ultimo', 'Umina Beach', 'Unanderra', 'Underbank', 'Undercliffe', 'Ungarie', 'Unumgar', 'Upper Allyn', 'Upper Bingara', 'Upper Burringbar', 'Upper Bylong', 'Upper Colo', 'Upper Coopers Creek', 'Upper Copmanhurst', 'Upper Corindi', 'Upper Crystal Creek', 'Upper Dartbrook', 'Upper Duck Creek', 'Upper Duroby', 'Upper Eden Creek', 'Upper Fine Flower', 'Upper Growee', 'Upper Horseshoe Creek', 'Upper Horton', 'Upper Kangaroo River', 'Upper Kangaroo Valley', 'Upper Karuah River', 'Upper Lansdowne', 'Upper Macdonald', 'Upper Main Arm', 'Upper Mangrove', 'Upper Manilla', 'Upper Mongogarie', 'Upper Myall', 'Upper Nile', 'Upper Orara', 'Upper Pappinbarra', 'Upper Rollands Plains', 'Upper Rouchel', 'Upper Taylors Arm', 'Upper Tooloom', 'Upper Turon', 'Upper Wilsons Creek', 'Upsalls Creek', 'Uralba', 'Uralla', 'Urana', 'Urangeline', 'Urangeline East', 'Uranquinty', 'Urawilkie', 'Urbenville', 'Uriarra', 'Urila', 'Urliup', 'Urunga', 'Utungun', 'Vacy', 'Vale Of Clwydd', 'Valentine', 'Valery', 'Valla', 'Valla Beach', 'Valley Heights', 'Varroville', 'Vaucluse', 'Verges Creek', 'Verona', 'Villawood', 'Vincentia', 'Vineyard', 'Violet Hill', 'Vittoria', 'Voyager Point' ],
+      'Victoria': ['Melbourne', 'Geelong', 'Ballarat', 'Bendigo', 'Shepparton', 'Mildura', 'Warrnambool', 'Traralgon', 'Horsham', 'Wodonga', 'Sale', 'Swan Hill', 'Wangaratta'],
+      'Queensland': ['Brisbane', 'Gold Coast', 'Sunshine Coast', 'Townsville', 'Cairns', 'Toowoomba', 'Mackay', 'Rockhampton', 'Bundaberg', 'Hervey Bay', 'Gladstone', 'Mount Isa'],
+      'Western Australia': ['Perth', 'Fremantle', 'Mandurah', 'Bunbury', 'Geraldton', 'Kalgoorlie', 'Broome', 'Port Hedland', 'Albany', 'Busselton', 'Esperance', 'Karratha'],
+      'South Australia': ['Adelaide', 'Mount Gambier', 'Whyalla', 'Port Augusta', 'Port Pirie', 'Murray Bridge', 'Port Lincoln', 'Victor Harbor'],
+      'Tasmania': ['Hobart', 'Launceston', 'Devonport', 'Burnie'],
+      'Northern Territory': ['Darwin', 'Alice Springs', 'Katherine', 'Nhulunbuy', 'Acacia Hills', 'Adelaide River', 'Alawa', 'Ali Curung', 'Alice Springs', 'Alpurrurulam', 'Alyangula', 'Amoonguna', 'Ampilatwatja', 'Anatye', 'Angurugu', 'Anindilyakwa', 'Anmatjere', 'Anula', 'Araluen', 'Archer', 'Areyonga', 'Arnold', 'Arumbera', 'Atitjere', 'Baines', 'Bakewell', 'Barunga', 'Batchelor', 'Bayview', 'Bees Creek', 'Bellamack', 'Belyuen', 'Berrimah', 'Berry Springs', 'Beswick', 'Beswick Creek', 'Binjari', 'Birdum', 'Black Jungle', 'Blackmore', 'Borroloola', 'Bradshaw', 'Braitling', 'Brinkin', 'Buchanan', 'Buffalo Creek', 'Bulman Weemol', 'Burrundie', 'Burt Plain', 'Bynoe', 'Bynoe Harbour', 'Calvert', 'Camp Creek', 'Canteen Creek', 'Casuarina', 'Channel Island', 'Charles Darwin', 'Charlotte', 'Chilla Well', 'Ciccone', 'Claravale', 'Cobourg', 'Coconut Grove', 'Collett Creek', 'Connellan', 'Coolalinga', 'Coomalie Creek', 'Coonawarra', 'Cossack', 'Costello', 'Cox Peninsula', 'Creswell', 'Daguragu', 'Daly', 'Daly River', 'Daly Waters', 'Darwin City', 'Darwin River', 'Darwin River Dam', 'Davenport', 'Delamere', 'Desert Springs', 'Douglas-Daly', 'Driver', 'Dundee Beach', 'Dundee Downs', 'Dundee Forest', 'Durack', 'East Arm', 'East Arnhem', 'East Point', 'East Side', 'Eaton', 'Edith', 'Elliott', 'Elrundie', 'Elsey', 'Emungalan', 'Engawala', 'Eva Valley', 'Fannie Bay', 'Farrar', 'Finke', 'Finniss Valley', 'Florina', 'Fly Creek', 'Flying Fox', 'Flynn', 'Freds Pass', 'Galiwinku', 'Gapuwiyak', 'Ghan', 'Gillen', 'Girraween', 'Glyde Point', 'Gray', 'Gregory', 'Gulung Mardrulk', 'Gunbalanya', 'Gunn', 'Gunn Point', 'Gunyangara', 'Gurindji', 'Haasts Bluff', 'Hale', 'Hart', 'Herbert', 'Hermannsburg', 'Hidden Valley', 'Holmes', 'Holtze', 'Hotham', 'Howard Springs', 'Hugh', 'Hughes', 'Humpty Doo', 'Ilparpa', 'Imanpa', 'Irlpme', 'Jabiru', 'Jilkminggan', 'Jingili', 'Johnston', 'Kakadu', 'Kalkarindji', 'Kaltukatjara', 'Karama', 'Katherine', 'Katherine East', 'Katherine South', 'Kilgariff', 'Kintore', 'Knuckey Lagoon', 'Koolpinyah', 'Kunparrka', 'Lajamanu', 'Lake Bennett', 'Lake Mackay', 'Lambells Lagoon', 'Lansdowne', 'Laramba', 'Larapinta', 'Larrakeyah', 'Larrimah', 'Leanyer', 'Lee Point', 'Limmen', 'Litchfield Park', 'Livingstone', 'Lloyd Creek', 'Ludmilla', 'Lyons', 'Malak', 'Manbulloo', 'Mandorah', 'Maningrida', 'Manton', 'Maranunga', 'Margaret River', 'Marlow Lagoon', 'Marrakai', 'Marrara', 'Mataranka', 'McArthur', 'McMinns Lagoon', 'Mereenie', 'Micket Creek', 'Middle Point', 'Milikapiti', 'Milingimbi', 'Millner', 'Milyakburra', 'Miniyeri', 'Minjilang', 'Mitchell', 'Moil', 'Moulden', 'Mount Bundey', 'Mount Johns', 'Mount Liebig', 'Mount Zeil', 'Muirhead', 'Murrumujuk', 'Mutitjulu', 'Nakara', 'Namatjira', 'Nauiyu', 'Nemarluk', 'Newcastle Waters', 'Nganmarriyanga', 'Ngukurr', 'Nhulunbuy', 'Nicholson', 'Nightcliff', 'Nitmiluk', 'Noonamah', 'Numbulwar', 'Numburindi', 'Nyirripi', 'Palmerston City', 'Pamayu', 'Papunya', 'Parap', 'Pellew Islands', 'Peppimenarti', 'Petermann', 'Pigeon Hole', 'Pine Creek', 'Pinelands', 'Pirlangimpi', 'Point Stuart', 'Rakula', 'Ramingining', 'Ranken', 'Rapid Creek', 'Robin Falls', 'Robinson River', 'Rosebery', 'Ross', 'Rum Jungle', 'Sadadeen', 'Sandover', 'Santa Teresa', 'Shoal Bay', 'Simpson', 'Southport', 'Stapleton', 'Stuart', 'Stuart Park', 'Sturt Plateau', 'Tablelands', 'Tanami', 'Tanami East', 'Tara', 'Tennant Creek', 'Thamarrurr', 'The Gap', 'The Gardens', 'The Narrows', 'Ti Tree', 'Timber Creek', 'Tindal', 'Tipperary', 'Titjikala', 'Tivendale', 'Tiwi', 'Tiwi Islands', 'Top Springs', 'Tortilla Flats', 'Tumbling Waters', 'Umbakumba', 'Undoolya', 'Uralla', 'Van Diemen Gulf', 'Venn', 'Vernon Islands', 'Victoria River', 'Virginia', 'Wadeye', 'Wagait Beach', 'Wagaman', 'Wak Wak', 'Wallace Rockhole', 'Wanguri', 'Warruwi', 'Warumungu', 'Weddell', 'West Arnhem', 'White Gums', 'Wickham', 'Willowra', 'Wilora', 'Wilton', 'Winnellie', 'Wishart', 'Woodroffe', 'Woolner', 'Wulagi', 'Wurrumiyanga', 'Wutunugurra', 'Yarralin', 'Yarrawonga', 'Yirrkala', 'Yuelamu', 'Yuendumu', 'Yulara', 'Zuccoli'],
+      'Australian Capital Territory': ['Canberra', 'Acton', 'Ainslie', 'Amaroo', 'Aranda', 'Banks', 'Barton', 'Beard', 'Belconnen', 'Bonner', 'Bonython', 'Braddon', 'Bruce', 'Calwell', 'Campbell', 'Canberra Airport', 'Capital Hill', 'Casey', 'Chapman', 'Charnwood', 'Chifley', 'Chisholm', 'City', 'Conder', 'Cook', 'Coombs', 'Crace', 'Curtin', 'Deakin', 'Denman Prospect', 'Dickson', 'Downer', 'Duffy', 'Dunlop', 'Evatt', 'Fadden', 'Farrer', 'Fisher', 'Florey', 'Flynn', 'Forde', 'Forrest', 'Franklin', 'Fraser', 'Fyshwick', 'Garran', 'Gilmore', 'Giralang', 'Gordon', 'Gowrie', 'Greenway', 'Griffith', 'Gungahlin', 'Hackett', 'Hall', 'Harrison', 'Hawker', 'Higgins', 'Holder', 'Holt', 'Hughes', 'Hume', 'Isaacs', 'Isabella Plains', 'Jacka', 'Kaleen', 'Kambah', 'Kingston', 'Latham', 'Lawson', 'Lyneham', 'Lyons', 'Macarthur', 'Macgregor', 'Macquarie', 'Mawson', 'McKellar', 'Melba', 'Mitchell', 'Molonglo', 'Monash', 'Moncrieff', 'Narrabundah', 'Ngunnawal', 'Nicholls', 'O\'Connor', 'O\'Malley', 'Oaks Estate', 'Oxley', 'Page', 'Palmerston', 'Parkes', 'Pearce', 'Phillip', 'Pialligo', 'Red Hill', 'Reid', 'Richardson', 'Rivett', 'Russell', 'Scullin', 'Spence', 'Stirling', 'Symonston', 'Tharwa', 'Theodore', 'Throsby', 'Torrens', 'Turner', 'Uriarra Village', 'Wanniassa', 'Waramanga', 'Watson', 'Weetangera', 'Weston', 'Wright', 'Yarralumla']
+    },
     currencySymbol: 'A$',
     sheetName: 'Australia'
   }
@@ -217,6 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const checkboxList = document.getElementById('locationCheckboxes');
     const selectedText = selectBox.querySelector('.selected-text');
     const searchInput = document.getElementById('locationSearch');
+    const selectedState = document.getElementById('state').value;
 
     // Clear existing checkboxes and event listeners
     locationContainer.innerHTML = '';
@@ -224,8 +218,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const newSelectBox = oldSelectBox.cloneNode(true);
     oldSelectBox.parentNode.replaceChild(newSelectBox, oldSelectBox);
 
-    // Get available locations based on university and course selection
-    const availableLocations = getAvailableLocations(country);
+    // Get available locations based on state, university and course selection
+    const availableLocations = getAvailableLocations(country, selectedState);
 
     // Add locations as checkboxes
     availableLocations.forEach(city => {
@@ -238,46 +232,62 @@ document.addEventListener('DOMContentLoaded', function () {
     initializeDropdownListeners(newSelectBox, checkboxList, searchInput, locationContainer, selectedText);
   }
 
-  function getAvailableLocations(country) {
+  function getAvailableLocations(country, selectedState) {
     const selectedUniversity = document.getElementById('university').value;
     const selectedCourse = document.getElementById('course').value;
     const selectedDegree = document.getElementById('degree').value;
 
-    // If no university is selected but degree is selected, show locations for all universities with that degree
+    // Get all cities for the selected state
+    let stateCities = selectedState ? countryConfigs[country].states[selectedState] : [];
+
+    // If no state is selected, get all cities from all states
+    if (!selectedState) {
+      stateCities = Object.values(countryConfigs[country].states).flat();
+    }
+
+    // If no university is selected but degree is selected
     if (!selectedUniversity && selectedDegree) {
       const filteredLocations = new Set();
       const relevantData = universityData.filter(uni => degreesMatch(uni.Degree, selectedDegree));
 
       relevantData.forEach(uni => {
         const locations = uni.Location.split(/,\s*/).map(loc => loc.trim());
-        locations.forEach(loc => filteredLocations.add(loc));
+        locations.forEach(loc => {
+          if (stateCities.includes(loc)) {
+            filteredLocations.add(loc);
+          }
+        });
       });
 
       return Array.from(filteredLocations).sort();
     }
 
-    // If no university or degree is selected, return all cities for the country
+    // If no university or degree is selected, return all cities for the selected state
     if (!selectedUniversity || !selectedDegree) {
-      return countryConfigs[country].cities;
+      return stateCities;
     }
 
-    // If university is selected but no course, show all locations for that university
+    // If university is selected but no course
     if (selectedUniversity && !selectedCourse) {
       const filteredLocations = new Set();
-      const universityData = universityData.filter(uni =>
-        uni.University_Name === selectedUniversity &&
-        (!selectedDegree || degreesMatch(uni.Degree, selectedDegree))
-      );
-
-      universityData.forEach(uni => {
-        const locations = uni.Location.split(/,\s*/).map(loc => loc.trim());
-        locations.forEach(loc => filteredLocations.add(loc));
-      });
+      const universityLocations = universityData
+        .filter(uni =>
+          uni.University_Name === selectedUniversity &&
+          (!selectedDegree || degreesMatch(uni.Degree, selectedDegree))
+        )
+        .forEach(uni => {
+          const locations = uni.Location.split(/,\s*/).map(loc => loc.trim());
+          locations.forEach(loc => {
+            if (stateCities.includes(loc)) {
+              filteredLocations.add(loc);
+            }
+          });
+        });
 
       return Array.from(filteredLocations).sort();
     }
 
-    // If both university and course are selected, show specific locations
+    // If both university and course are selected
     const filteredLocations = new Set();
     const data = universityData.filter(uni =>
       uni.University_Name === selectedUniversity &&
@@ -287,7 +297,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     data.forEach(uni => {
       const locations = uni.Location.split(/,\s*/).map(loc => loc.trim());
-      locations.forEach(loc => filteredLocations.add(loc));
+      locations.forEach(loc => {
+        if (stateCities.includes(loc)) {
+          filteredLocations.add(loc);
+        }
+      });
     });
 
     return Array.from(filteredLocations).sort();
@@ -507,7 +521,6 @@ document.addEventListener('DOMContentLoaded', function () {
           Intake: uni.Intake || 'N/A',
           Percentage_CGPA: uni.Percentage_CGPA || 'N/A',
           English_Test: uni.English_Test || 'N/A',
-          Study_Gap: uni.Study_Gap || 'N/A',
           Field_of_Study: uni.Field_of_Study || 'N/A',
           Fee: uni.Fee || 'N/A',
           Initial_Deposit: uni.Initial_Deposit || 'N/A',
@@ -536,7 +549,6 @@ document.addEventListener('DOMContentLoaded', function () {
           <td>${escapeHtml(safeUni.Intake)}</td>
           <td>${formatScore(safeUni.Percentage_CGPA, activeFilters.cgpa)}</td>
           <td>${formatListItems(safeUni.English_Test, activeFilters.englishTests, /[,\s\/]|and|or/, true)}</td>
-          <td>${escapeHtml(safeUni.Study_Gap)}</td>
           <td>${formatListItems(safeUni.Field_of_Study, activeFilters.fields)}</td>
           <td>${formatCurrency(safeUni.Fee)}</td>
           <td>${formatCurrency(safeUni.Initial_Deposit)}</td>
@@ -841,7 +853,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Global variables to store university and course data
-  let universityData = {};
+  window.universityData = [];
   let currentUniversities = [];
 
   // Function to populate university dropdown based on country selection
@@ -859,7 +871,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       // Store all data for later use
-      universityData = data;
+      window.universityData = data;
 
       // Filter universities based on degree if selected and not "All"
       let filteredData = data;
@@ -878,6 +890,9 @@ document.addEventListener('DOMContentLoaded', function () {
         option.textContent = uni;
         universitySelect.appendChild(option);
       });
+
+      // Update state dropdown after loading universities
+      updateStateDropdown(country);
 
       console.log(`Populated ${universities.length} universities for ${country}${selectedDegree ? ` with degree ${selectedDegree}` : ''}`);
     } catch (error) {
@@ -907,6 +922,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Handle Certificate levels
     if (selectedDegree.includes('certificate')) {
+      // Handle Graduate Certificate separately
+      if (selectedDegree === 'graduate certificate') {
+        return courseDegree.includes('graduate certificate') ||
+          courseDegree.includes('grad cert') ||
+          (courseDegree.includes('graduate') && courseDegree.includes('certificate'));
+      }
+
+      // Handle Postgraduate Certificate separately
+      if (selectedDegree === 'postgraduate certificate') {
+        return courseDegree.includes('postgraduate certificate') ||
+          courseDegree.includes('post graduate certificate') ||
+          courseDegree.includes('pgcert') ||
+          (courseDegree.includes('postgraduate') && courseDegree.includes('certificate'));
+      }
+
+      // Handle Certificate I-IV
       const certLevel = selectedDegree.match(/certificate\s+(i+|[1-4])/i);
       if (certLevel) {
         const level = certLevel[1];
@@ -924,42 +955,70 @@ document.addEventListener('DOMContentLoaded', function () {
     if (selectedDegree === 'diploma') {
       return courseDegree.includes('diploma') &&
         !courseDegree.includes('advanced') &&
-        !courseDegree.includes('leading to');
+        !courseDegree.includes('leading to') &&
+        !courseDegree.includes('graduate') &&
+        !courseDegree.includes('postgraduate');
     }
+
+    if (selectedDegree === 'graduate diploma') {
+      return courseDegree.includes('graduate diploma') ||
+        courseDegree.includes('grad dip') ||
+        (courseDegree.includes('graduate') && courseDegree.includes('diploma'));
+    }
+
+    if (selectedDegree === 'postgraduate diploma') {
+      return courseDegree.includes('postgraduate diploma') ||
+        courseDegree.includes('post graduate diploma') ||
+        courseDegree.includes('pgdip') ||
+        (courseDegree.includes('postgraduate') && courseDegree.includes('diploma'));
+    }
+
     if (selectedDegree === 'diploma leading to bachelor') {
       return courseDegree.includes('diploma') &&
         (courseDegree.includes('leading to bachelor') ||
           courseDegree.includes('pathway to bachelor') ||
           courseDegree.includes('articulation to bachelor'));
     }
+
     if (selectedDegree.includes('advanced diploma')) {
       return courseDegree.includes('advanced diploma') || courseDegree.includes('associate degree');
     }
 
     // Handle Bachelor's Degree
-    if (selectedDegree.includes("bachelor's degree")) {
-      return courseDegree.includes('bachelor') && !courseDegree.includes('honours');
+    if (selectedDegree === "bachelor's degree") {
+      return courseDegree.includes('bachelor') &&
+        !courseDegree.includes('honours') &&
+        !courseDegree.includes('hons');
     }
 
-    // Handle Bachelor Honours / Grad Cert / Grad Dip
-    if (selectedDegree.includes('bachelor honours')) {
-      return courseDegree.includes('honours') ||
-        courseDegree.includes('graduate certificate') ||
-        courseDegree.includes('graduate diploma') ||
-        courseDegree.includes('grad cert') ||
-        courseDegree.includes('grad dip');
+    // Handle Bachelor Honours
+    if (selectedDegree === 'bachelor honours') {
+      return courseDegree.includes('bachelor') &&
+        (courseDegree.includes('honours') || courseDegree.includes('hons'));
     }
 
-    // Handle Master's Degree
-    if (selectedDegree.includes("master's degree")) {
-      return courseDegree.includes('master');
+    // Handle Master's Degrees
+    if (selectedDegree === "master's degree (course work)") {
+      return courseDegree.includes('master') &&
+        (courseDegree.includes('course work') ||
+          courseDegree.includes('coursework') ||
+          !courseDegree.includes('research'));
+    }
+
+    if (selectedDegree === "master's degree (by research)") {
+      return courseDegree.includes('master') &&
+        (courseDegree.includes('research') ||
+          courseDegree.includes('by research') ||
+          courseDegree.includes('mphil') ||
+          courseDegree.includes('master of philosophy'));
     }
 
     // Handle Doctoral Degree
     if (selectedDegree.includes('doctoral') || selectedDegree.includes('phd')) {
       return courseDegree.includes('phd') ||
         courseDegree.includes('doctoral') ||
-        courseDegree.includes('doctorate');
+        courseDegree.includes('doctorate') ||
+        courseDegree.includes('doctor of philosophy');
     }
 
     return false;
@@ -1009,14 +1068,77 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Add university change event listener
   document.getElementById('university').addEventListener('change', function (e) {
+    updateStateDropdown(currentCountry);
     populateCourseDropdown(e.target.value);
-    setupLocationDropdown(currentCountry);
   });
 
   // Add course change event listener
   document.getElementById('course').addEventListener('change', function () {
+    updateStateDropdown(currentCountry);
     setupLocationDropdown(currentCountry);
   });
+
+  // Add state change event listener
+  document.getElementById('state').addEventListener('change', function () {
+    setupLocationDropdown(currentCountry);
+  });
+
+  // Function to get states for cities
+  function getStatesForCities(cities, country) {
+    const states = new Set();
+    Object.entries(countryConfigs[country].states).forEach(([state, stateCities]) => {
+      if (cities.some(city => stateCities.includes(city))) {
+        states.add(state);
+      }
+    });
+    return Array.from(states).sort();
+  }
+
+  // Function to update state dropdown
+  function updateStateDropdown(country) {
+    const stateSelect = document.getElementById('state');
+    const selectedUniversity = document.getElementById('university').value;
+    const selectedCourse = document.getElementById('course').value;
+    const selectedState = stateSelect.value; // Store current selection
+
+    // Get available states based on filters
+    let availableStates = [];
+
+    if (selectedUniversity) {
+      // Filter states based on university locations
+      const universityData = window.universityData.filter(uni =>
+        uni.University_Name === selectedUniversity &&
+        (!selectedCourse || uni.Course === selectedCourse)
+      );
+
+      const universityCities = new Set();
+      universityData.forEach(uni => {
+        uni.Location.split(/,\s*/).map(loc => loc.trim()).forEach(city => {
+          universityCities.add(city);
+        });
+      });
+
+      availableStates = getStatesForCities(Array.from(universityCities), country);
+    } else {
+      // If no university selected, show all states
+      availableStates = Object.keys(countryConfigs[country].states).sort();
+    }
+
+    // Update state dropdown
+    stateSelect.innerHTML = '<option value="">Select State</option>';
+    availableStates.forEach(state => {
+      const option = document.createElement('option');
+      option.value = state;
+      option.textContent = state;
+      if (state === selectedState) {
+        option.selected = true;
+      }
+      stateSelect.appendChild(option);
+    });
+
+    // Update city dropdown after state update
+    setupLocationDropdown(country);
+  }
 });
 
 // Download functionality
@@ -1317,22 +1439,22 @@ function getCurrentFilteredData() {
   const rows = document.querySelectorAll('#resultsTable tbody tr:not([style*="display: none"])');
   if (rows.length === 0) return null;
 
-  const headers = Array.from(document.querySelectorAll('#resultsTable thead th'))
-    .map(th => th.textContent.trim().replace(/\s+/g, '_'));
-
   return Array.from(rows).map(row => {
     const cells = Array.from(row.querySelectorAll('td'));
-    const rowData = {};
-    cells.forEach((cell, index) => {
-      if (headers[index] === 'Course_link') {
-        // Get the actual URL from the link's href attribute
-        const link = cell.querySelector('a');
-        rowData[headers[index]] = link ? link.getAttribute('href') : 'N/A';
-      } else {
-        rowData[headers[index]] = cell.textContent.trim();
-      }
-    });
-    return rowData;
+    return {
+      University_Name: cells[0].textContent.trim(),
+      Location: cells[1].textContent.trim(),
+      Degree: cells[2].textContent.trim(),
+      Course: cells[3].textContent.trim(),
+      Intake: cells[4].textContent.trim(),
+      Percentage_CGPA: cells[5].textContent.trim(),
+      English_Test: cells[6].textContent.trim(),
+      Field_of_Study: cells[7].textContent.trim(),
+      Fee: cells[8].textContent.trim(),
+      Initial_Deposit: cells[9].textContent.trim(),
+      Other_Remarks: cells[10].textContent.trim(),
+      Course_link: cells[11].querySelector('a') ? cells[11].querySelector('a').href : 'N/A'
+    };
   });
 }
 
@@ -1366,18 +1488,21 @@ function formatCourseLinkForPDF(link) {
   return link && link !== 'N/A' ? link : 'N/A';
 }
 
-// Update downloadAsPDF function to use table format
+// Update downloadAsPDF function to handle errors better
 function downloadAsPDF(data, clientDetails) {
   try {
-    if (typeof window.jsPDF === 'undefined') {
-      throw new Error('jsPDF library not loaded');
+    console.log('Starting PDF generation...');
+
+    if (!window.jspdf || !window.jsPDF) {
+      console.error('jsPDF not found:', { jspdf: window.jspdf, jsPDF: window.jsPDF });
+      throw new Error('PDF generation library not loaded properly');
     }
 
     if (!Array.isArray(data) || data.length === 0) {
       throw new Error('No data available to generate PDF');
     }
 
-    // Initialize jsPDF with landscape orientation and larger format
+    // Initialize jsPDF
     const doc = new window.jsPDF({
       orientation: 'landscape',
       unit: 'mm',
@@ -1392,12 +1517,12 @@ function downloadAsPDF(data, clientDetails) {
       right: 10
     };
 
-    // Add title with better positioning
+    // Add title
     doc.setFontSize(18);
-    doc.setTextColor(44, 62, 80); // Dark blue color
-    doc.text('APTITUDE MIGRATION - Options as per client Profile', margins.left + 20, margins.top, { align: 'left' });
+    doc.setTextColor(44, 62, 80);
+    doc.text('APTITUDE MIGRATION - Options as per client Profile', margins.left + 20, margins.top);
 
-    // Add client details with better formatting
+    // Add client details
     doc.setFontSize(12);
     doc.setTextColor(60, 60, 60);
     const clientDetailsY = margins.top + 15;
@@ -1405,79 +1530,59 @@ function downloadAsPDF(data, clientDetails) {
     doc.text(`City: ${clientDetails['City']}`, margins.left + 100, clientDetailsY);
     doc.text(`Generated on: ${clientDetails['Date']}`, doc.internal.pageSize.getWidth() - margins.right - 50, clientDetailsY);
 
-    // Prepare headers with proper formatting
+    // Define table headers
     const headers = [
-      { title: "University", dataKey: "University_Name", width: 45 },
-      { title: "Location", dataKey: "Location", width: 35 },
-      { title: "Degree", dataKey: "Degree", width: 30 },
-      { title: "Course", dataKey: "Course", width: 45 },
-      { title: "Intake", dataKey: "Intake", width: 20 },
-      { title: "Score", dataKey: "Percentage_CGPA", width: 20 },
-      { title: "English Test", dataKey: "English_Test", width: 25 },
-      { title: "Study Gap", dataKey: "Study_Gap", width: 20 },
-      { title: "Field", dataKey: "Field_of_Study", width: 30 },
-      { title: "Fee", dataKey: "Fee", width: 25 },
-      { title: "Initial Deposit", dataKey: "Initial_Deposit", width: 25 },
-      { title: "Remarks", dataKey: "Other_Remarks", width: 40 },
-      { title: "Course Link", dataKey: "Course_link", width: 45 }
+      { title: "University", dataKey: "University_Name" },
+      { title: "Location", dataKey: "Location" },
+      { title: "Degree", dataKey: "Degree" },
+      { title: "Course", dataKey: "Course" },
+      { title: "Intake", dataKey: "Intake" },
+      { title: "Score", dataKey: "Percentage_CGPA" },
+      { title: "English Test", dataKey: "English_Test" },
+      { title: "Field", dataKey: "Field_of_Study" },
+      { title: "Fee", dataKey: "Fee" },
+      { title: "Initial Deposit", dataKey: "Initial_Deposit" },
+      { title: "Remarks", dataKey: "Other_Remarks" },
+      { title: "Course Link", dataKey: "Course_link" }
     ];
 
-    // Store link positions for later processing
+    // Store link positions
     const linkPositions = [];
 
-    // Process data with proper formatting
-    const pdfData = data.map(row => {
-      const processedRow = {};
-      headers.forEach(header => {
-        let value = row[header.dataKey];
-
-        // Format different types of data
-        switch (header.dataKey) {
-          case 'Fee':
-          case 'Initial_Deposit':
-            processedRow[header.dataKey] = formatCurrencyForPDF(value);
-            break;
-          case 'Course_link':
-            processedRow[header.dataKey] = value !== 'N/A' ? value : 'N/A';
-            break;
-          case 'Other_Remarks':
-            processedRow[header.dataKey] = value ? value.replace(/\\n/g, '\n') : 'N/A';
-            break;
-          default:
-            processedRow[header.dataKey] = value || 'N/A';
-        }
-      });
-      return processedRow;
+    // Process data for table
+    const tableData = data.map(row => {
+      return {
+        University_Name: row.University_Name || 'N/A',
+        Location: row.Location || 'N/A',
+        Degree: row.Degree || 'N/A',
+        Course: row.Course || 'N/A',
+        Intake: row.Intake || 'N/A',
+        Percentage_CGPA: row.Percentage_CGPA || 'N/A',
+        English_Test: row.English_Test || 'N/A',
+        Field_of_Study: row.Field_of_Study || 'N/A',
+        Fee: formatCurrencyForPDF(row.Fee),
+        Initial_Deposit: formatCurrencyForPDF(row.Initial_Deposit),
+        Other_Remarks: row.Other_Remarks || 'N/A',
+        Course_link: row.Course_link || 'N/A'
+      };
     });
 
-    // Calculate optimal table dimensions
-    const tableTop = clientDetailsY + 20;
-    const tableWidth = doc.internal.pageSize.getWidth() - margins.left - margins.right;
-
-    // Generate the table with improved settings
+    // Configure autoTable
     doc.autoTable({
       head: [headers.map(h => h.title)],
-      body: pdfData.map(row => {
-        return headers.map(h => {
-          if (h.dataKey === 'Course_link') {
-            return row[h.dataKey];
-          }
-          return row[h.dataKey];
-        });
-      }),
-      startY: tableTop,
+      body: tableData.map(row => Object.values(row)),
+      startY: clientDetailsY + 20,
       margin: margins,
       styles: {
+        font: 'helvetica',
         fontSize: 8,
-        cellPadding: { top: 3, right: 3, bottom: 3, left: 3 },
+        cellPadding: 3,
         overflow: 'linebreak',
+        halign: 'center', // Center align all cells by default
         valign: 'middle',
-        halign: 'center',
-        textColor: [40, 40, 40],
-        lineColor: [200, 200, 200],
         lineWidth: 0.1,
-        minCellHeight: 8,
-        cellWidth: 'wrap'
+        lineColor: [80, 80, 80],
+        minCellHeight: 12
       },
       headStyles: {
         fillColor: [41, 128, 185],
@@ -1485,78 +1590,98 @@ function downloadAsPDF(data, clientDetails) {
         fontSize: 9,
         fontStyle: 'bold',
         halign: 'center',
-        minCellHeight: 12
+        cellPadding: 4
       },
       columnStyles: {
-        0: { cellWidth: headers[0].width },
-        1: { cellWidth: headers[1].width },
-        2: { cellWidth: headers[2].width },
-        3: { cellWidth: headers[3].width },
-        4: { cellWidth: headers[4].width },
-        5: { cellWidth: headers[5].width },
-        6: { cellWidth: headers[6].width },
-        7: { cellWidth: headers[7].width },
-        8: { cellWidth: headers[8].width },
-        9: { cellWidth: headers[9].width },
-        10: { cellWidth: headers[10].width },
-        11: { cellWidth: headers[11].width, halign: 'left' },
-        12: {
-          cellWidth: headers[12].width,
-          halign: 'left',
-          textColor: [0, 0, 255], // Blue color for links
+        0: { cellWidth: 45, halign: 'center' }, // University
+        1: { cellWidth: 35, halign: 'center' }, // Location
+        2: { cellWidth: 30, halign: 'center' }, // Degree
+        3: { cellWidth: 45, halign: 'center' }, // Course
+        4: { cellWidth: 20, halign: 'center' }, // Intake
+        5: { cellWidth: 20, halign: 'center' }, // Score
+        6: { cellWidth: 25, halign: 'center' }, // English Test
+        7: { cellWidth: 30, halign: 'center' }, // Field
+        8: { cellWidth: 25, halign: 'center' }, // Fee
+        9: { cellWidth: 25, halign: 'center' }, // Initial Deposit
+        10: { // Remarks column
+          cellWidth: 40,
           fontStyle: 'normal',
-          fontSize: 8
+          fontSize: 8,
+          cellPadding: 5,
+          overflow: 'linebreak',
+          whiteSpace: 'pre-wrap',
+          halign: 'center'
+        },
+        11: { // Course Link column
+          cellWidth: 45,
+          textColor: [0, 0, 255],
+          fontStyle: 'normal',
+          halign: 'center'
         }
       },
       didParseCell: function (data) {
-        // Store link positions for Course_link column and ensure URLs are shown
-        if (data.column.dataKey === 'Course_link' && data.cell.raw !== 'N/A') {
-          const url = data.cell.raw;
-          linkPositions.push({
-            text: url,
-            x: data.cell.x,
-            y: data.cell.y,
-            width: data.cell.width,
-            height: data.cell.height
-          });
-          data.cell.text = url;
+        // Handle course links
+        if (data.column.index === 11) {
+          const cellValue = data.cell.raw;
+          if (cellValue && cellValue !== 'N/A') {
+            linkPositions.push({
+              url: cellValue,
+              x: data.cell.x,
+              y: data.cell.y,
+              w: data.cell.width,
+              h: data.cell.height,
+              pageNumber: data.pageNumber
+            });
+          }
+        }
+
+        // Handle remarks
+        if (data.column.index === 10) {
+          const cellValue = data.cell.raw;
+          if (cellValue && cellValue !== 'N/A') {
+            data.cell.styles.cellPadding = 5;
+            data.cell.styles.whiteSpace = 'pre-wrap';
+            data.cell.styles.overflow = 'linebreak';
+            data.cell.styles.halign = 'left';
+            data.cell.text = cellValue.split('\n');
+          }
         }
       },
-      willDrawCell: function (data) {
-        // Make course links blue
-        if (data.column.dataKey === 'Course_link' && data.cell.raw !== 'N/A') {
-          data.cell.styles.textColor = [0, 0, 255];
-          data.cell.text = data.cell.raw;
+      didDrawCell: function (data) {
+        // Add underline for course links
+        if (data.column.index === 11 && data.cell.raw && data.cell.raw !== 'N/A') {
+          doc.setDrawColor(0, 0, 255);
+          doc.line(
+            data.cell.x,
+            data.cell.y + data.cell.height - 1,
+            data.cell.x + data.cell.width,
+            data.cell.y + data.cell.height - 1
+          );
         }
       },
       didDrawPage: function (data) {
         // Add page numbers
+        const pageNumber = `Page ${data.pageNumber} of ${data.pageCount}`;
         doc.setFontSize(8);
-        doc.setTextColor(100, 100, 100);
-        const pageNumberText = `Page ${data.pageNumber} of ${data.pageCount}`;
-        doc.text(
-          pageNumberText,
-          doc.internal.pageSize.getWidth() - margins.right,
-          doc.internal.pageSize.getHeight() - margins.bottom,
-          { align: 'right' }
-        );
+        doc.text(pageNumber, doc.internal.pageSize.getWidth() - margins.right - 30, doc.internal.pageSize.getHeight() - 10);
 
-        // Add clickable links for this page
+        // Add clickable links
         linkPositions.forEach(link => {
-          if (link.text && link.text !== 'N/A') {
-            doc.link(link.x, link.y, link.width, link.height, { url: link.text });
+          if (link.pageNumber === data.pageNumber) {
+            doc.link(link.x, link.y, link.w, link.h, { url: link.url });
           }
         });
       }
     });
 
-    // Save the PDF with timestamp
+    // Save PDF
     const timestamp = new Date().toLocaleDateString().replace(/\//g, '-');
     doc.save(`university_results_${timestamp}.pdf`);
-    console.log('PDF generated successfully');
+    console.log('PDF generated successfully!');
+
   } catch (error) {
-    console.error('Error in downloadAsPDF:', error);
-    alert('Error generating PDF. Please try again.');
+    console.error('Error generating PDF:', error);
+    alert(`Error generating PDF: ${error.message}. Please check console for details.`);
   }
 }
 
